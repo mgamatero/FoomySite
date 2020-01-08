@@ -15,6 +15,14 @@ footer{
   width:4em;
 }
 
+ul.footer-icon-subsections{
+  list-style-type: none;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height:10em;
+}
+
 hr{
   margin: 0;
   height: .3em;
