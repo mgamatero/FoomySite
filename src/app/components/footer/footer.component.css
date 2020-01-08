@@ -1,0 +1,23 @@
+footer{
+  color: grey;
+}
+
+.footer-icons{
+  margin-top:3em;
+  margin-bottom:1.5em;
+}
+
+.footer-text{
+  margin:3em;
+}
+
+#footer-foomy-icon{
+  width:4em;
+}
+
+hr{
+  margin: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+}

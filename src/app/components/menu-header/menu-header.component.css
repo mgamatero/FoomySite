@@ -1,0 +1,59 @@
+.menu .menu-links{
+  display: flex;
+
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+
+  min-height:100vh;
+  background: url(../../../assets/images/menu-header.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+.menu-links{
+  justify-content: space-around;
+  display:flex;
+  margin-top: 2em;
+
+}
+
+.menu-links .nav-link a{
+/* margin-top:2em; */
+ margin-right:2em;
+ font-size: 2.2em;
+ font-family: 'Lato';
+ color:rgb(255, 255, 255);
+}
+
+.menu-links .nav-link a:hover{
+font-weight: bolder;
+
+ border-bottom: solid 4px rgb(255, 255, 255);
+  }
+
+li{
+  list-style-type: none;
+}
+
+.logo{
+  margin-left:2em;
+  margin-top: 2em;
+
+
+}
+
+/* <ul class="menu-links">
+    <li class="nav-link">
+      <div class="link-item">
+        <a href="#">Become A Chef</a>
+      </div>
+    </li> */
+
+
