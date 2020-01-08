@@ -12,7 +12,8 @@ footer{
 }
 
 #footer-foomy-icon{
-  width:4em;
+  /* width:4em; */
+  height: 10em;
 }
 
 ul.footer-icon-subsections{
