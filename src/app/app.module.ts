@@ -13,6 +13,7 @@ import { HowItWorksComponent } from './components/landing-page/how-it-works/how-
 import { FoomiesNearYouComponent } from './components/landing-page/foomies-near-you/foomies-near-you.component';
 import { FeedbackComponent } from './components/landing-page/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HowItWorksComponent,
     FoomiesNearYouComponent,
     FeedbackComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
