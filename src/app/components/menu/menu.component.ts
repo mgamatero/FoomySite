@@ -4,11 +4,11 @@ import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-menu-header',
-  templateUrl: './menu-header.component.html',
-  styleUrls: ['./menu-header.component.css']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
 })
-export class MenuHeaderComponent implements OnInit {
+export class MenuComponent implements OnInit {
 test:string;
 
   constructor() { }

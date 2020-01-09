@@ -23,10 +23,12 @@ ul.footer-icon-subsections{
   height:5em;
 }
 
-
 hr{
   margin: 0;
+  padding: 0;
   height: .3em;
   background-color:lightgray;
   color: lightgray;
 }
+
+

@@ -1,0 +1,49 @@
+.menu .menu-links{
+  display: flex;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+ background-color:#f5e7e7;
+}
+
+.menu-links{
+  justify-content: space-around;
+  align-items: center;
+  display:flex;
+}
+
+.menu-links .nav-link a{
+ margin-right:2em;
+ font-size: 2.2em;
+ font-family: 'Lato';
+ color:#5c5555;
+}
+
+.menu-links .nav-link a:hover{
+font-weight: bolder;
+ border-bottom: solid 4px #5c5555;
+  }
+
+li{
+  list-style-type: none;
+}
+
+.logo{
+  margin-left:2em;
+  margin-top: 1em;
+}
+
+hr{
+  margin: 0;
+  padding: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+  z-index: -1;
+}
+
+
+
+
+

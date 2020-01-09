@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 
 import {ButtonModule} from 'primeng/button';
@@ -18,12 +18,13 @@ import { HeaderComponent } from './components/landing-page/header/header.compone
 import { PlainHeaderComponent } from './components/plain-header/plain-header.component';
 import { NotFoundComponent} from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HrComponent } from './components/hr/hr.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    MenuHeaderComponent,
+    MenuComponent,
     HowItWorksComponent,
     FoomiesNearYouComponent,
     FeedbackComponent,
@@ -31,7 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     PlainHeaderComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    HrComponent
 
   ],
   imports: [
