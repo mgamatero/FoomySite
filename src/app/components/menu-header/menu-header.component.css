@@ -7,14 +7,12 @@
   display: flex;
   justify-content: space-between;
 
-  min-height:100vh;
-  background: url(../../../assets/images/menu-header.png) no-repeat center center;
+  /* min-height:100vh; */
+  /* background: url(../../../assets/images/menu-header.png) no-repeat center center; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-
 }
 
 .menu-links{

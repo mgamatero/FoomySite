@@ -14,6 +14,7 @@ import { FoomiesNearYouComponent } from './components/landing-page/foomies-near-
 import { FeedbackComponent } from './components/landing-page/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/landing-page/header/header.component';
 import { PlainHeaderComponent } from './components/plain-header/plain-header.component';
 import { NotFoundComponent} from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     LoginComponent,
     PlainHeaderComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
 
   ],
   imports: [

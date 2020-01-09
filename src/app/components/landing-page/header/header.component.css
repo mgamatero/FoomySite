@@ -1,0 +1,71 @@
+.menu .menu-links{
+  display: flex;
+
+}
+
+.main-header-section{
+
+
+  min-height:100vh;
+  background: url(../../../../assets/images/header-img.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+.header-search{
+  font-family: 'Nunito', sans-serif;
+
+  min-width: 100%;
+  border:#fdd solid .2px;
+ background-color: #fdd;
+ border-radius: 10rem;
+ text-align: center;
+padding:.2em;
+box-shadow: 0px 0px 10px 10px #fdd ;
+position:absolute;
+top:40vh;
+}
+
+.header-searchbox{
+  height:3em;
+  min-width: 60%;
+  border:none;
+  border-radius: 1em;
+  font-size: 2.6em;
+  margin:.2em;
+  text-align: center;
+  font-weight: bold;
+  position:relative;
+}
+
+.icon-search{
+  position:absolute;
+  left:75%;
+  top:55%;
+}
+
+input.header-searchbox:focus {
+  outline-width: 0;
+}
+
+.header-search-text{
+ font-size: 3.8em;
+  color:#773f31;
+  margin:.2em;
+
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
