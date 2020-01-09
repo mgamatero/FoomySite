@@ -4,7 +4,9 @@
 .menu{
   display: flex;
   justify-content: space-between;
- background-color:#f5e7e7;
+ /* background-color:#f5e7e7; */
+ background: linear-gradient(to left, #f5e7e7 0%, #bb4239 100%);
+
 }
 
 .menu-links{
