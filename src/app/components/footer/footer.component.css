@@ -3,16 +3,16 @@ footer{
 }
 
 .footer-icons{
-  margin-top:3em;
+  margin-top:2em;
   margin-bottom:1.5em;
 }
 
 .footer-text{
-  margin:3em;
+  margin:2em;
 }
 
 #footer-foomy-icon{
-  height: 5em;
+  height: 3em;
 }
 
 ul.footer-icon-subsections{
@@ -20,7 +20,11 @@ ul.footer-icon-subsections{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  height:5em;
+  height:3em;
+}
+
+ul.footer-icon-subsections li img{
+  height:3em;
 }
 
 hr{
