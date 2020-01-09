@@ -14,6 +14,10 @@ import { FoomiesNearYouComponent } from './components/landing-page/foomies-near-
 import { FeedbackComponent } from './components/landing-page/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+// import { InitialLoginComponent } from './components/login/initial-login/initial-login.component';
+import { PlainHeaderComponent } from './components/plain-header/plain-header.component';
+import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,14 +28,18 @@ import { LoginComponent } from './components/login/login.component';
     FoomiesNearYouComponent,
     FeedbackComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    // InitialLoginComponent,
+    PlainHeaderComponent,
+    AppRoutingComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
