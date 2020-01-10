@@ -19,6 +19,7 @@ import { PlainHeaderComponent } from './components/plain-header/plain-header.com
 import { NotFoundComponent} from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HrComponent } from './components/hr/hr.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HrComponent } from './components/hr/hr.component';
     PlainHeaderComponent,
     NotFoundComponent,
     HeaderComponent,
-    HrComponent
+    HrComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
