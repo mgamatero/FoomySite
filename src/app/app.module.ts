@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HrComponent } from './components/hr/hr.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AddPhotoComponent } from './components/sign-up/add-photo/add-photo.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HeaderComponent,
     HrComponent,
     ForgotPasswordComponent,
-    SignUpComponent
+    SignUpComponent,
+    AddPhotoComponent
 
   ],
   imports: [

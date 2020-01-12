@@ -1,0 +1,38 @@
+hr{
+  margin: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+}
+
+.add_photo_text{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 1.5em;
+  margin: 3% 10%;
+}
+
+.social_media_add_photo_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 20vh;
+  color: rgb(50,50,50);
+  margin-bottom: 1.5em;
+}
+
+.social_media_button{
+  width:30% ;
+  height: auto;
+  font-size: 1.25em;
+  background-color: white;
+  color: rgb(50, 50, 50);
+  border-color: rgb(50, 50, 50);
+  margin: .5em;
+
+}
+
+
+
+
