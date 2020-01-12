@@ -20,6 +20,7 @@ import { NotFoundComponent} from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HrComponent } from './components/hr/hr.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     NotFoundComponent,
     HeaderComponent,
     HrComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SignUpComponent
 
   ],
   imports: [
