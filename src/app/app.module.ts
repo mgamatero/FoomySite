@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
@@ -22,6 +22,7 @@ import { HrComponent } from './components/hr/hr.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddPhotoComponent } from './components/sign-up/add-photo/add-photo.component';
+import { BecomeChefComponent } from './components/become-chef/become-chef.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +40,15 @@ import { AddPhotoComponent } from './components/sign-up/add-photo/add-photo.comp
     HrComponent,
     ForgotPasswordComponent,
     SignUpComponent,
-    AddPhotoComponent
+    AddPhotoComponent,
+    BecomeChefComponent
 
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     ButtonModule,
     InputTextModule,
     AppRoutingModule

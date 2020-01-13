@@ -49,12 +49,19 @@ hr{
   background-color: white;
   color: rgb(50, 50, 50);
   border-color: rgb(50, 50, 50);
-  margin-bottom:1em;
+  margin-bottom:.5em;
 }
 
 .email_sign-up_button{
   margin-bottom: 1em;
   margin-right: 1em;
+}
+
+.errMessage{
+  font-style: italic;
+  height: .5rem;
+  color: red;
+  margin-top:0rem;
 }
 
 
