@@ -8,6 +8,7 @@ import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { AddPhotoComponent } from "./components/sign-up/add-photo/add-photo.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { BecomeChefComponent } from "./components/become-chef/become-chef.component";
+import { CreateDishComponent } from "./components/create-dish/create-dish.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-up/add-photo', component: AddPhotoComponent },
   { path: 'become-chef', component: BecomeChefComponent },
+  { path: 'become-chef/create-dish', component: CreateDishComponent },
+
 
   { path: '**', component:NotFoundComponent}
   ];

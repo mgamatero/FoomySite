@@ -14,7 +14,8 @@
 class="become-chef-image p-col-6">
 <div class="p-col-3"></div>
     <div class="p-col-5"></div>
-    <button pButton type="submit" class="ui-button-danger become-chef-button p-col-2" label="Continue"></button>
+    <button pButton type="submit" class="ui-button-danger become-chef-button ui-button-rounded p-col-2" label="Continue"
+    routerLink="create-dish" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"></button>
     <div class="p-col-5"></div>
   </div>
 </section>

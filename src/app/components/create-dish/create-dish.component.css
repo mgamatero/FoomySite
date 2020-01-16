@@ -1,0 +1,20 @@
+.create-dish1{
+  height:80vh;
+  padding: 2rem;
+}
+
+.create-dish-button, ui-button-text{
+  font-size: 2rem;
+  font-family: 'Nunito', sans-serif;
+  padding:.5rem;
+}
+
+.create-dish-button{
+  border:red solid 2px !important;
+}
+
+.get-ideas-text{
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.5rem;
+}
+
