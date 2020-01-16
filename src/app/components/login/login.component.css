@@ -29,7 +29,6 @@ hr{
   background-color: white;
   color: rgb(50, 50, 50);
   border-color: rgb(50, 50, 50);
-
 }
 
 .email_login_section{
@@ -40,8 +39,6 @@ hr{
   min-height: 20vh;
   margin-bottom: 1.5em;
 }
-
-
 
 .email_text_box{
   width:100%;

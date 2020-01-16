@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from "./components/forgot-password/forgot-pas
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { AddPhotoComponent } from "./components/sign-up/add-photo/add-photo.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+import { BecomeChefComponent } from "./components/become-chef/become-chef.component";
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'login/forgot-password', component: ForgotPasswordComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-up/add-photo', component: AddPhotoComponent },
+  { path: 'become-chef', component: BecomeChefComponent },
 
   { path: '**', component:NotFoundComponent}
   ];

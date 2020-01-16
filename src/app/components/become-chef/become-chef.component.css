@@ -1,0 +1,48 @@
+hr{
+  margin: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+}
+
+.become-chef_splash-page{
+  background-color: #ffdddd;
+  padding: 2rem 1rem;
+}
+
+.become-chef_text{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 2.5em;
+  margin-bottom: 2.5rem;
+}
+
+.become-chef_subtext{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 1.25em;
+  /* margin: 3% 10%; */
+}
+
+.become-chef-body{
+  display: flex;
+  justify-content: center;
+}
+
+.become-chef-image{
+  padding: 3rem;
+  /* width: 50%; */
+
+  height: auto;
+  justify-content: center;
+}
+
+.become-chef-button{
+border-radius: 2em;
+}
+
+
+
+
+
+
