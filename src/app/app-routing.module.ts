@@ -15,10 +15,17 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'login/forgot-password', component: ForgotPasswordComponent },
+
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-up/add-photo', component: AddPhotoComponent },
+
   { path: 'become-chef', component: BecomeChefComponent },
-  { path: 'become-chef/create-dish', component: CreateDishComponent },
+  { path: 'become-chef/sign-up', component: SignUpComponent },
+  { path: 'become-chef/sign-up/add-photo', component: AddPhotoComponent },
+  { path: 'become-chef/sign-up/add-photo/create-dish', component: CreateDishComponent },
+
+
+  // { path: 'become-chef/create-dish', component: CreateDishComponent },
 
 
   { path: '**', component:NotFoundComponent}

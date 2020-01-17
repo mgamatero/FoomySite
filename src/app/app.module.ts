@@ -23,8 +23,6 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddPhotoComponent } from './components/sign-up/add-photo/add-photo.component';
 import { BecomeChefComponent } from './components/become-chef/become-chef.component';
-import { ChefSignUpComponent } from './components/become-chef/chef-sign-up/chef-sign-up.component';
-import { ChefAddPhotoComponent } from './components/become-chef/chef-add-photo/chef-add-photo.component';
 import { CreateDishComponent } from './components/create-dish/create-dish.component';
 
 @NgModule({
@@ -45,8 +43,6 @@ import { CreateDishComponent } from './components/create-dish/create-dish.compon
     SignUpComponent,
     AddPhotoComponent,
     BecomeChefComponent,
-    ChefSignUpComponent,
-    ChefAddPhotoComponent,
     CreateDishComponent
 
   ],
