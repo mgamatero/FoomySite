@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
+
+
 import { HowItWorksComponent } from './components/landing-page/how-it-works/how-it-works.component';
 import { FoomiesNearYouComponent } from './components/landing-page/foomies-near-you/foomies-near-you.component';
 import { FeedbackComponent } from './components/landing-page/feedback/feedback.component';
@@ -24,6 +27,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddPhotoComponent } from './components/sign-up/add-photo/add-photo.component';
 import { BecomeChefComponent } from './components/become-chef/become-chef.component';
 import { CreateDishComponent } from './components/create-dish/create-dish.component';
+import { CreateDishTemporaryCRUDComponent } from './components/create-dish-temporary-crud/create-dish-temporary-crud.component';
+import { CardsFoomyComponent } from './components/cards-foomy/cards-foomy.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,9 @@ import { CreateDishComponent } from './components/create-dish/create-dish.compon
     SignUpComponent,
     AddPhotoComponent,
     BecomeChefComponent,
-    CreateDishComponent
+    CreateDishComponent,
+    CreateDishTemporaryCRUDComponent,
+    CardsFoomyComponent
 
   ],
   imports: [
@@ -53,6 +60,7 @@ import { CreateDishComponent } from './components/create-dish/create-dish.compon
     ReactiveFormsModule,
     ButtonModule,
     InputTextModule,
+    CardModule,
     AppRoutingModule
   ],
   providers: [],

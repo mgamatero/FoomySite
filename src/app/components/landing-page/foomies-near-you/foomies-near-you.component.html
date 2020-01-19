@@ -1,17 +1,24 @@
-<section class="foomies-near-you-section p-grid">
+<section class="foomies-near-you-section">
   <div class="foomies-near-you-content">
-    <div class="p-col-12">
+    <div class="p-col-12 p-grid">
       <h3 class="foomies-near-you-title">Foommies near you:</h3>
-
     </div>
 
 
-    <div class="p-col-12">
 
-    <div class="foomies-near-you-cards">
-      <img src="../../../../assets/images/temp-foommy-cards.PNG" width="100%" alt="">
-      <h1>WIP - CARDS HERE!!!!</h1>
+
+    <div *ngFor="let foommy of foommies">
+    <div class="foomies-near-you-cards p-grid" style="justify-content: center">
+        <div class="p-col-4">
+          <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
+            <p-header>
+              <img src="Card" src={{foommy.image}} style="min-width: 100%">
+            </p-header>
+            <div>Specialties: {{foommy.specialties}}</div>
+          </p-card>
+        </div>
+      </div>
     </div>
-    </div>
+
   </div>
 </section>
