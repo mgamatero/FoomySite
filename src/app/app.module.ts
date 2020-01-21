@@ -2,6 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+import { environment } from '../environments/environment'; //firebase
+import { AngularFireModule } from '@angular/fire';
+// import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -18,7 +25,6 @@ import { FeedbackComponent } from './components/landing-page/feedback/feedback.c
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/landing-page/header/header.component';
-import { PlainHeaderComponent } from './components/plain-header/plain-header.component';
 import { NotFoundComponent} from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HrComponent } from './components/hr/hr.component';
@@ -28,7 +34,9 @@ import { AddPhotoComponent } from './components/sign-up/add-photo/add-photo.comp
 import { BecomeChefComponent } from './components/become-chef/become-chef.component';
 import { CreateDishComponent } from './components/create-dish/create-dish.component';
 import { CreateDishTemporaryCRUDComponent } from './components/create-dish-temporary-crud/create-dish-temporary-crud.component';
-import { CardsFoomyComponent } from './components/cards-foomy/cards-foomy.component';
+
+import{ FoomiesService } from './services/foomies.service';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +48,6 @@ import { CardsFoomyComponent } from './components/cards-foomy/cards-foomy.compon
     FeedbackComponent,
     FooterComponent,
     LoginComponent,
-    PlainHeaderComponent,
     NotFoundComponent,
     HeaderComponent,
     HrComponent,
@@ -50,7 +57,7 @@ import { CardsFoomyComponent } from './components/cards-foomy/cards-foomy.compon
     BecomeChefComponent,
     CreateDishComponent,
     CreateDishTemporaryCRUDComponent,
-    CardsFoomyComponent
+    SandboxComponent,
 
   ],
   imports: [
@@ -61,9 +68,19 @@ import { CardsFoomyComponent } from './components/cards-foomy/cards-foomy.compon
     ButtonModule,
     InputTextModule,
     CardModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    AngularFireModule,
+    // AngularFireAnalyticsModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase, 'FoommySite'),
+    AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [
+    FoomiesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

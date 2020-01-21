@@ -5,20 +5,19 @@
     </div>
 
 
+<app-sandbox></app-sandbox>
 
-
-    <div *ngFor="let foommy of foommies">
-    <div class="foomies-near-you-cards p-grid" style="justify-content: center">
+    <div *ngFor="let foommy of foommyFromDB">
+    <div class="p-grid">
         <div class="p-col-4">
           <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
             <p-header>
-              <img src="Card" src={{foommy.image}} style="min-width: 100%">
+              <img src="Card" src={{foommy.image}}>
             </p-header>
             <div>Specialties: {{foommy.specialties}}</div>
           </p-card>
         </div>
       </div>
     </div>
-
   </div>
 </section>

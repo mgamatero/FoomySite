@@ -1,0 +1,33 @@
+<form class="sandbox_form p-grid">
+    <div class="p-col-12">
+      <div class="ui-float-label">
+        <input id="title" type="text" pInputText
+          class="email_text_box" [(ngModel)]="newFoommy.title" name="title">
+        <label for="float-input" >Title</label>
+      </div>
+    </div>
+    <div class="p-col-12">
+      <div class="ui-float-label">
+        <input id="address" type="text" pInputText
+          class="email_text_box" [(ngModel)]="newFoommy.address" name="address">
+        <label for="address">Address</label>
+      </div>
+    </div>
+    <div class="p-col-12">
+      <div class="ui-float-label">
+        <input id="image" type="text" pInputText
+          class="email_text_box" [(ngModel)]="newFoommy.image" name="image">
+        <label for="image">Image</label>
+      </div>
+    </div>
+    <div class="p-col-12">
+      <div class="ui-float-label">
+        <input id="specialties" type="text" pInputText
+          class="email_text_box" [(ngModel)]="newFoommy.specialties" name="specialties">
+        <label for="specialties">Specialties</label>
+      </div>
+    </div>
+{{newFoommy | json}}
+
+    <button type="submit" (click)="addDB()">Submit</button>
+
