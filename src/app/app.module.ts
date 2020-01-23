@@ -16,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CardModule} from 'primeng/card';
+import {CheckboxModule} from 'primeng/checkbox';
 
 
 import { HowItWorksComponent } from './components/landing-page/how-it-works/how-it-works.component';
@@ -69,7 +71,9 @@ import { AddDishFormComponent } from './add-dish-form/add-dish-form.component';
     ReactiveFormsModule,
     ButtonModule,
     InputTextModule,
+    InputTextareaModule,
     CardModule,
+    CheckboxModule,
     AppRoutingModule,
 
     AngularFireModule,

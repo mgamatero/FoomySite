@@ -1,1 +1,25 @@
-<p>add-dish works!</p>
+
+<form>
+
+  <p-checkbox name="groupname" value="American" label="American" [(ngModel)]="dish_form_value.dish_cuisine" checked="false"></p-checkbox>
+  <p-checkbox name="groupname" value="Asian" label="Asian"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+  <p-checkbox name="groupname" value="Chinese" label="Chinese"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+  <p-checkbox name="groupname" value="Japanese" label="Japanese"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+  <p-checkbox name="groupname" value="Italian" label="Italian"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+  <p-checkbox name="groupname" value="Fusion" label="Fusion"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+  <p-checkbox name="groupname" value="Other" label="Other"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+
+  Selected Cities: <span *ngFor="let category of dish_cuisine" style="margin-right:10px">{{category}}</span>
+<hr>
+
+  <span class="ui-float-label">
+    <textarea rows="5" cols="30" pInputTextarea autoResize="autoResize" class="ui-inputtext" [(ngModel)]="dish_form_value.dish_ingredients" name="form_value.ingredients"></textarea>
+    <label for="ingredients_value">Ingredients</label>
+  </span>
+  <span class="ui-float-label">
+    <textarea rows="5" cols="30" pInputTextarea autoResize="autoResize" class="ui-inputtext" [(ngModel)]="dish_form_value.dish_allergen" name="form_value.allergen"></textarea>
+    <label for="allergen_value">Allergen</label>
+  </span>
+  {{dish_form_value | json}}
+
+</form>
