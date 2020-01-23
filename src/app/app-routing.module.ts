@@ -13,6 +13,7 @@ import { CreateDishComponent } from "./components/create-dish/create-dish.compon
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
+  // { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'login/forgot-password', component: ForgotPasswordComponent },
 
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'become-chef', component: BecomeChefComponent },
   { path: 'become-chef/sign-up', component: SignUpComponent },
   { path: 'become-chef/sign-up/add-photo', component: AddPhotoComponent },
-  { path: 'become-chef/sign-up/add-photo/create-dish', component: CreateDishComponent },
+  { path: 'become-chef/sign-up/create-dish', component: CreateDishComponent },
 
 
   // { path: 'become-chef/create-dish', component: CreateDishComponent },

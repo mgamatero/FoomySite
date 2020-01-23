@@ -7,9 +7,9 @@
 
 <app-sandbox></app-sandbox>
 
-    <div *ngFor="let foommy of foommyFromDB">
+    <div>
     <div class="p-grid">
-        <div class="p-col-4">
+        <div class="p-col-4" *ngFor="let foommy of foommyFromDB">
           <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
             <p-header>
               <img src="Card" src={{foommy.image}}>
