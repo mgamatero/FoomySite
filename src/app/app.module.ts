@@ -37,6 +37,7 @@ import { CreateDishTemporaryCRUDComponent } from './components/create-dish-tempo
 
 import{ FoomiesService } from './services/foomies.service';
 import { SandboxComponent } from './components/sandbox/sandbox.component';
+import { AddDishFormComponent } from './add-dish-form/add-dish-form.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { SandboxComponent } from './components/sandbox/sandbox.component';
     CreateDishComponent,
     CreateDishTemporaryCRUDComponent,
     SandboxComponent,
+    AddDishFormComponent,
 
   ],
   imports: [

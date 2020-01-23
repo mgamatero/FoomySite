@@ -9,6 +9,7 @@ import { AddPhotoComponent } from "./components/sign-up/add-photo/add-photo.comp
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { BecomeChefComponent } from "./components/become-chef/become-chef.component";
 import { CreateDishComponent } from "./components/create-dish/create-dish.component";
+import {AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 
 
 const routes: Routes = [
@@ -25,6 +26,8 @@ const routes: Routes = [
   { path: 'become-chef/sign-up/add-photo', component: AddPhotoComponent },
   { path: 'become-chef/sign-up/create-dish', component: CreateDishComponent },
 
+  { path: 'create-dish', component: CreateDishComponent },
+  { path: 'create-dish/add-dish-form', component: AddDishFormComponent },
 
   // { path: 'become-chef/create-dish', component: CreateDishComponent },
 
