@@ -1,14 +1,14 @@
 import { NgModule } from "@angular/core";
 // import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from "@angular/router";
-import { LandingPageComponent } from "./components/landing-page/landing-page.component";
-import { LoginComponent } from "./components/login/login.component";
-import { ForgotPasswordComponent } from "./components/forgot-password/forgot-password.component";
-import { SignUpComponent } from "./components/sign-up/sign-up.component";
-import { AddPhotoComponent } from "./components/sign-up/add-photo/add-photo.component";
-import { NotFoundComponent } from "./components/not-found/not-found.component";
-import { BecomeChefComponent } from "./components/become-chef/become-chef.component";
-import { CreateDishComponent } from "./components/create-dish/create-dish.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { LoginComponent } from "./login/login.component";
+import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
+import { SignUpComponent } from "./sign-up/sign-up.component";
+import { AddPhotoComponent } from "./sign-up/add-photo/add-photo.component";
+import { NotFoundComponent } from "./not-found/not-found.component";
+import { BecomeChefComponent } from "./become-chef/become-chef.component";
+import { CreateDishComponent } from "./create-dish/create-dish.component";
 import {AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 
 
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'become-chef', component: BecomeChefComponent },
   { path: 'become-chef/sign-up', component: SignUpComponent },
   { path: 'become-chef/sign-up/add-photo', component: AddPhotoComponent },
-  { path: 'become-chef/sign-up/create-dish', component: CreateDishComponent },
+  // { path: 'become-chef/sign-up/create-dish', component: CreateDishComponent },
 
   { path: 'create-dish', component: CreateDishComponent },
   { path: 'create-dish/add-dish-form', component: AddDishFormComponent },

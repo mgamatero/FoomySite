@@ -4,7 +4,7 @@
 
 .main-header-section {
   min-height: 100vh;
-  background: url(../../../../assets/images/header-img.png) no-repeat center
+  background: url(../../../assets/images/header-img.png) no-repeat center
     center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

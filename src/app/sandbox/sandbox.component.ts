@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FoomiesService} from '../../services/foomies.service';
-import { FoommyInfo } from "../../models/foommyinfo";
+import { FoomiesService} from '../services/foomies.service';
+import { FoommyInfo } from "../models/foommyinfo";
 
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { CardModule } from "primeng/card";
-import { FoomiesService } from "../../../services/foomies.service";
-import { FoommyInfo } from "../../../models/foommyinfo";
+import { FoomiesService } from "../../services/foomies.service";
+import { FoommyInfo } from "../../models/foommyinfo";
 import{ SandboxComponent } from "../../sandbox/sandbox.component";
 
 @Component({
