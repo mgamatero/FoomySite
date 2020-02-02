@@ -38,8 +38,12 @@ import { CreateDishComponent } from './create-dish/create-dish.component';
 import { CreateDishTemporaryCRUDComponent } from './create-dish-temporary-crud/create-dish-temporary-crud.component';
 
 import{ FoomiesService } from './services/foomies.service';
+import{  AuthService } from './services/auth.service';
+import { FlashMessagesService } from "angular2-flash-messages";
+
 import { SandboxComponent } from './sandbox/sandbox.component';
 import { AddDishFormComponent } from './add-dish-form/add-dish-form.component';
+
 
 @NgModule({
   declarations: [
@@ -85,7 +89,9 @@ import { AddDishFormComponent } from './add-dish-form/add-dish-form.component';
     AngularFirestoreModule,
   ],
   providers: [
-    FoomiesService
+    FoomiesService,
+    AuthService,
+    FlashMessagesService
   ],
   bootstrap: [AppComponent]
 })

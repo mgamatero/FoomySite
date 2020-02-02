@@ -12,9 +12,10 @@
     <div class="p-col-4"></div>
     <div class="p-col-4">
       <div class="ui-float-label">
-        <input id="float-input" type="text" pInputText
-          class="email_text_box" formControlName="email">
-        <label for="float-input">Email</label>
+        <input id="float-input-email" type="text" pInputText
+          class="email_text_box" formControlName="email" [(ngModel)]="email">
+
+        <label for="float-input-email">Email</label>
       </div>
       <span class="errMessage" *ngIf="loginForm.controls['email'].invalid">Email is required</span>
     </div>
@@ -23,9 +24,10 @@
         <div class="p-col-4"></div>
     <div class="p-col-4">
       <div class="ui-float-label">
-        <input id="float-input" type="text" pInputText
-          class="email_text_box" formControlName="password">
-        <label for="float-input">Password</label>
+        <input id="float-input-password" type="text" pInputText
+          class="email_text_box" formControlName="password" [(ngModel)]="password">
+
+        <label for="float-input-password">Password</label>
       </div>
       <span class="errMessage" *ngIf="loginForm.controls['password'].invalid">Password is required</span>
     </div>
@@ -34,7 +36,10 @@
 
     <div>
       <button pButton type="submit" class="email_login_button" label="Submit" icon='pi pi-check' iconPos="left"
-        [disabled]="loginForm.invalid"></button>
+        [disabled]="loginForm.invalid"
+        (click)="onSubmit()"
+        >
+      </button>
       <button pButton type="submit" class="email_login_button ui-button-danger" label="Forgot Password?"
         icon='pi pi-check' iconPos="left" routerLink="forgot-password"></button>
 
