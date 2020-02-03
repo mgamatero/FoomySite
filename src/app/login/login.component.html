@@ -2,9 +2,9 @@
   <p class="login_text">Log in with:</p>
   <div class="social_media_login_section">
     <button pButton type="button" class="social_media_button" label="Google" icon='fab fa-google'
-      iconPos="left"></button>
+      iconPos="left" (click)="onGoogleLogin()"></button>
     <button pButton type="button" class="social_media_button" label="Facebook" icon='fab fa-facebook-square'
-      iconPos="left"></button>
+      iconPos="left" disabled></button>
   </div>
 
   <p class="login_text">Or continue with:</p>
@@ -37,7 +37,7 @@
     <div>
       <button pButton type="submit" class="email_login_button" label="Submit" icon='pi pi-check' iconPos="left"
         [disabled]="loginForm.invalid"
-        (click)="onSubmit()"
+        (click)="onEmailLogIn()"
         >
       </button>
       <button pButton type="submit" class="email_login_button ui-button-danger" label="Forgot Password?"

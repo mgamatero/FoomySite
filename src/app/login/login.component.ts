@@ -5,6 +5,8 @@ import { PasswordModule } from "primeng/password";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { AuthService } from "../services/auth.service";
 import { FlashMessagesService } from "angular2-flash-messages";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { auth } from "firebase/app";
 import { Router } from "@angular/router";
 
 @Component({
@@ -14,12 +16,12 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup; //Reactive forms
-
   email: string;
   password: string;
 
   constructor(
-    private authService: AuthService,
+    private emailAuth:AuthService,
+    private afAuth: AngularFireAuth,
     private router: Router,
     private flashMessage: FlashMessagesService
   ) {}
@@ -34,19 +36,32 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  onEmailLogIn(){
 
+  console.log('Email Login')
+  this.afAuth.auth.signInWithEmailAndPassword(this.email,this.password)
+  .then(success=>{
+    console.log('Success email')
+    this.router.navigate(["/"])
+  })
+  .catch(err=>{
+    console.log(err.message)
+  })
+  // this.emailAuth.login(this.email,this.password)
+  // .then(success=>{
+  //   console.log('Email Login')
+  //   this.router.navigate(["/"])
+  // })
+  // .catch(err=>{
+  //   console.log('Not logged in',err.message)
+  // })
 
-  onSubmit() {
-    console.log('click submit')
+}
 
-    this.authService
-      .login(this.email, this.password)
-      .then(res => {
-             console.log('Logged in')
-        this.router.navigate(["/"]);
-      })
-      .catch(err => {
-            console.log('NOT Logged in', err.message)
-      });
-  }
+  onGoogleLogin() {
+    console.log('Google Login')
+    this.afAuth.auth
+      .signInWithPopup(new auth.GoogleAuthProvider())
+      this.router.navigate(["/"])
+   }
 }
