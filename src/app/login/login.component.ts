@@ -3,7 +3,6 @@ import { ButtonModule } from "primeng/button";
 import { InputTextModule } from "primeng/inputtext";
 import { PasswordModule } from "primeng/password";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { AuthService } from "../services/auth.service";
 import { FlashMessagesService } from "angular2-flash-messages";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { auth } from "firebase/app";
@@ -20,7 +19,6 @@ export class LoginComponent implements OnInit {
   password: string;
 
   constructor(
-    private emailAuth:AuthService,
     private afAuth: AngularFireAuth,
     private router: Router,
     private flashMessage: FlashMessagesService
