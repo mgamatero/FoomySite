@@ -45,11 +45,18 @@ export class SignUpComponent implements OnInit {
     this.afs.auth
       .createUserWithEmailAndPassword(this.email, this.password)
       .then(success => {
-        window.alert("account created - logged in");
+
+      })
+      .then(userInfo=>{
+        window.alert(`account created - logged in as ${this.isUserLoggedIn()}`); //not working
       })
       .catch(err => {
         window.alert(err.message);
         this.router.navigate(['sign-up'])
       });
+  }
+
+  isUserLoggedIn() {
+    return JSON.parse(localStorage.getItem('user'));
   }
 }
