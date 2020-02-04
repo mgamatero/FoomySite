@@ -3,10 +3,13 @@ import { ButtonModule } from "primeng/button";
 import { InputTextModule } from "primeng/inputtext";
 import { PasswordModule } from "primeng/password";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { FlashMessagesService } from "angular2-flash-messages";
+
 import { AngularFireAuth } from "@angular/fire/auth";
 import { auth } from "firebase/app";
 import { Router } from "@angular/router";
+
+import { MessageService } from "primeng/api";
+import { ToastModule } from "primeng/toast";
 
 @Component({
   selector: "app-login",
@@ -21,7 +24,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
-    private flashMessage: FlashMessagesService
+    private messageService: MessageService
   ) {}
 
   ngOnInit() {
@@ -34,24 +37,25 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onEmailLogIn(){
-
-  console.log('Email Login')
-  this.afAuth.auth.signInWithEmailAndPassword(this.email,this.password)
-  .then(success=>{
-    console.log('Success email')
-    this.router.navigate(["/"])
-  })
-  .catch(err=>{
-    console.log(err.message)
-  })
-}
+  onEmailLogIn() {
+    console.log("Email Login");
+    this.afAuth.auth
+      .signInWithEmailAndPassword(this.email, this.password)
+      .then(success => {
+        console.log("Success email");
+        this.messageService.add({ severity:'success', summary:'You are logged in'})
+        this.router.navigate(["/"]);
+      })
+      .catch(err => {
+        console.log(err.message);
+      });
+  }
 
   onGoogleLogin() {
-    console.log('Google Login')
-    this.afAuth.auth
-      .signInWithPopup(new auth.GoogleAuthProvider())
-      this.router.navigate(["/"])
-      window.alert('You are logged in')
-   }
+    console.log("Google Login");
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.messageService.add({ severity:'success', summary:'You are logged in'})
+    this.router.navigate(["/"]);
+    window.alert("You are logged in");
+  }
 }

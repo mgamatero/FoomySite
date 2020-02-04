@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 // import {ButtonModule} from 'primeng/button';
 import {FormsModule} from '@angular/forms';
 import { AuthService } from "../services/auth.service";
-import { FlashMessagesService } from "angular2-flash-messages";
 import { Router } from "@angular/router";
 
 import { AngularFireAuth } from "@angular/fire/auth";
 import { auth } from "firebase/app";
+
+import {MessageService} from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
 
 
 @Component({
@@ -21,7 +23,7 @@ test:string;
   constructor(
     public afAuth: AngularFireAuth,
     private router: Router,
-    private flashMessage: FlashMessagesService
+    private messageService: MessageService
     ) { }
 
   ngOnInit() {
@@ -32,7 +34,10 @@ test:string;
 
     this.afAuth.auth
       .signOut();
+
+        this.messageService.add({severity:'info', summary:'You are logged out'});
+
       this.router.navigate(["/"])
-      window.alert('You are logged out')
+      // window.alert('You are logged out')
   }
 }
