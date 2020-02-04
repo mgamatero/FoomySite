@@ -45,15 +45,6 @@ export class LoginComponent implements OnInit {
   .catch(err=>{
     console.log(err.message)
   })
-  // this.emailAuth.login(this.email,this.password)
-  // .then(success=>{
-  //   console.log('Email Login')
-  //   this.router.navigate(["/"])
-  // })
-  // .catch(err=>{
-  //   console.log('Not logged in',err.message)
-  // })
-
 }
 
   onGoogleLogin() {
@@ -61,5 +52,6 @@ export class LoginComponent implements OnInit {
     this.afAuth.auth
       .signInWithPopup(new auth.GoogleAuthProvider())
       this.router.navigate(["/"])
+      window.alert('You are logged in')
    }
 }

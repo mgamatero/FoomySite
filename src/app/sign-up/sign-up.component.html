@@ -33,7 +33,7 @@
     <div class="p-col-4">
       <div class="ui-float-label form-group">
         <input id="float-input" type="text" pInputText
-          class="email_text_box" formControlName="email">
+          class="email_text_box" formControlName="email" [(ngModel)]="email">
         <label for="float-input">Email</label>
       </div>
 
@@ -55,7 +55,7 @@
     <div class="p-col-4">
       <div class="ui-float-label form-group">
         <input id="float-input" type="password" pInputText
-          class="email_text_box" formControlName="password">
+          class="email_text_box" formControlName="password" [(ngModel)]="password">
         <label for="float-input">Password</label>
       </div>
       <span class="errMessage" *ngIf="signUpForm.controls['password'].invalid" >Password is required (mininum 6 characters)</span>
@@ -66,7 +66,7 @@
 
     <div>
       <button pButton type="submit" class="email_sign-up_button" label="Submit" icon='pi pi-check'
-        iconPos="left" routerLink="add-photo" [disabled]="signUpForm.invalid"></button>
+        iconPos="left" routerLink="add-photo" [disabled]="signUpForm.invalid" (click)="onRegister()"></button>
       <button pButton type="cancel" class="email_sign-up_button ui-button-danger" label="Cancel"
         icon='pi pi-times' iconPos="left" routerLink="/"></button>
 

@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
 test:string;
 
   constructor(
-    private afAuth: AngularFireAuth,
+    public afAuth: AngularFireAuth,
     private router: Router,
     private flashMessage: FlashMessagesService
     ) { }
@@ -33,5 +33,6 @@ test:string;
     this.afAuth.auth
       .signOut();
       this.router.navigate(["/"])
+      window.alert('You are logged out')
   }
 }
