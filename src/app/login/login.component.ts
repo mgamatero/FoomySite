@@ -4,7 +4,10 @@ import { InputTextModule } from "primeng/inputtext";
 import { PasswordModule } from "primeng/password";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
-import { AngularFireAuth } from "@angular/fire/auth";
+// import { AngularFireAuth } from "@angular/fire/auth";
+import { AuthService } from "../services/auth.service";
+
+
 import { auth } from "firebase/app";
 import { Router } from "@angular/router";
 
@@ -22,7 +25,7 @@ export class LoginComponent implements OnInit {
   password: string;
 
   constructor(
-    private afAuth: AngularFireAuth,
+    private afAuth: AuthService,
     private router: Router,
     private messageService: MessageService
   ) {}
@@ -39,8 +42,8 @@ export class LoginComponent implements OnInit {
 
   onEmailLogIn() {
     console.log("Email Login");
-    this.afAuth.auth
-      .signInWithEmailAndPassword(this.email, this.password)
+    this.afAuth.login(this.email,this.password)
+      // .signInWithEmailAndPassword(this.email, this.password)
       .then(success => {
         console.log("Success email");
         this.messageService.add({ severity:'success', summary:'You are logged in'})
@@ -53,7 +56,7 @@ export class LoginComponent implements OnInit {
 
   onGoogleLogin() {
     console.log("Google Login");
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afAuth.googleLogin();
     this.messageService.add({ severity:'success', summary:'You are logged in'})
     this.router.navigate(["/"]);
     window.alert("You are logged in");

@@ -3,10 +3,12 @@ import { Component, OnInit } from '@angular/core';
 // import {ButtonModule} from 'primeng/button';
 import {FormsModule} from '@angular/forms';
 import { AuthService } from "../services/auth.service";
+
 import { Router } from "@angular/router";
 
-import { AngularFireAuth } from "@angular/fire/auth";
-import { auth } from "firebase/app";
+//This all goes in auth service
+// import { AngularFireAuth } from "@angular/fire/auth";
+// import { auth } from "firebase/app";
 
 import {MessageService} from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
@@ -21,7 +23,8 @@ export class MenuComponent implements OnInit {
 test:string;
 
   constructor(
-    public afAuth: AngularFireAuth,
+    // public afAuth: AngularFireAuth,
+    public afAuth: AuthService,
     private router: Router,
     private messageService: MessageService
     ) { }
@@ -32,12 +35,9 @@ test:string;
   onLogout() {
     console.log('loggedout')
 
-    this.afAuth.auth
-      .signOut();
-
+    this.afAuth.logout()
         this.messageService.add({severity:'info', summary:'You are logged out'});
-
       this.router.navigate(["/"])
-      // window.alert('You are logged out')
+          // window.alert('You are logged out')
   }
 }
