@@ -10,6 +10,7 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 import { BecomeChefComponent } from "./become-chef/become-chef.component";
 import { CreateDishComponent } from "./create-dish/create-dish.component";
 import {AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
+import {AddDishFormPreviewComponent } from "./add-dish-form-preview/add-dish-form-preview.component";
 
 
 const routes: Routes = [
@@ -27,7 +28,9 @@ const routes: Routes = [
   // { path: 'become-chef/sign-up/create-dish', component: CreateDishComponent },
 
   { path: 'create-dish', component: CreateDishComponent },
-  { path: 'create-dish/add-dish-form', component: AddDishFormComponent },
+
+  { path: 'add-dish-form', component: AddDishFormComponent },
+  { path: 'add-dish-form/add-dish-form-preview', component: AddDishFormPreviewComponent },
 
   // { path: 'become-chef/create-dish', component: CreateDishComponent },
 

@@ -19,6 +19,7 @@ import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { CardModule } from "primeng/card";
 import { CheckboxModule } from "primeng/checkbox";
+import {DropdownModule} from 'primeng/dropdown';
 
 import { HowItWorksComponent } from "./landing-page/how-it-works/how-it-works.component";
 import { FoomiesNearYouComponent } from "./landing-page/foomies-near-you/foomies-near-you.component";
@@ -44,6 +45,7 @@ import { SandboxComponent } from "./sandbox/sandbox.component";
 import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 
 import {ToastModule} from 'primeng/toast';
+import { AddDishFormPreviewComponent } from './add-dish-form-preview/add-dish-form-preview.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import {ToastModule} from 'primeng/toast';
     CreateDishComponent,
     CreateDishTemporaryCRUDComponent,
     SandboxComponent,
-    AddDishFormComponent
+    AddDishFormComponent,
+    AddDishFormPreviewComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +80,7 @@ import {ToastModule} from 'primeng/toast';
     InputTextareaModule,
     CardModule,
     CheckboxModule,
+    DropdownModule,
 
     AppRoutingModule,
     ToastModule,
