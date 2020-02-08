@@ -20,6 +20,7 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import { CardModule } from "primeng/card";
 import { CheckboxModule } from "primeng/checkbox";
 import {DropdownModule} from 'primeng/dropdown';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 import { HowItWorksComponent } from "./landing-page/how-it-works/how-it-works.component";
 import { FoomiesNearYouComponent } from "./landing-page/foomies-near-you/foomies-near-you.component";
@@ -81,6 +82,7 @@ import { AddDishFormPreviewComponent } from './add-dish-form-preview/add-dish-fo
     CardModule,
     CheckboxModule,
     DropdownModule,
+    RadioButtonModule,
 
     AppRoutingModule,
     ToastModule,

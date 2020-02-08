@@ -21,7 +21,7 @@
     </li>
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Login</a>
+        <a href="#" routerLink="login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"  *ngIf="!(afAuth)">Login</a>
       </div>
     </li>
     <li class="nav-link">

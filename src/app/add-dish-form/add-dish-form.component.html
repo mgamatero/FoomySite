@@ -1,57 +1,105 @@
-
-<form>
-  <div>
+<form class="p-grid">
+  <!-- <div>
     {{dish_form_value|json}}
+  </div> -->
+  <div class="add_dish_title">
+    Add A Dish
   </div>
-    <label for="dish_image">Add photos to your dish</label>
-    <div>
-      <input type="text" pInputText name="dish_image" [(ngModel)]="dish_form_value.image">
-    </div>
+  <div class="p-col-2"></div>
+  <div class="p-col-10">
+    <hr>
+  </div>
+  <div class="p-col-12">
+    <label for="dish_image" class="add_dish_labels">Add a photo to your dish</label>
+  </div>
+  <div class="p-col-1"></div>
+  <div class="p-col-9">
+    <input type="text" pInputText name="dish_image" [(ngModel)]="dish_form_value.image" class="p-col-12">
+  </div>
+  <div class="p-col-2"></div>
 
-    <label for="dish_name">Name your dish:</label>
-    <div>
-      <input type="text" pInputText name="dish_name" [(ngModel)]="dish_form_value.name" placeholder="e.g Teriyaki Chicken/Carne Asada">
-    </div>
-    <label for="dish_category">Category</label>
-    <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" placeholder="Select a Category" optionLabel="name" name="category" [showClear]="true"></p-dropdown>
-
-    <label for="dish_cuisine">Cuisine Type / Ethnicity</label>
-    <div>
-      <input type="text" pInputText name="dish_cuisine" [(ngModel)]="dish_form_value.cuisine" placeholder="e.g. American / Mexican / Asian / Italian, etc">
-    </div>
-    <label for="diallergens">Food Allergens</label>
-    <div>
-      <input type="text" pInputText name="dish_allergens" [(ngModel)]="dish_form_value.allergens" placeholder="e.g Milk / Eggs / Fish">
-    </div>
-    <label for="dish_description">Describe your dish (optional)</label>
-    <div>
-      <input type="text" pInputText name="dish_description" [(ngModel)]="dish_form_value.description" placeholder="Special recipe, ingredients, or a memorable story">
-    </div>
-<button>Back</button>
-<button (click)="onPreviewClick()" routerLink="add-dish-form-preview">Preview</button>
+  <div class="p-col-12">
+    <label for="dish_name" class="add_dish_labels">Name your dish:</label>
+  </div>
+  <div class="p-col-1"></div>
+  <div class="p-col-9">
+    <input type="text" pInputText name="dish_name" [(ngModel)]="dish_form_value.name"
+      placeholder="e.g Teriyaki Chicken/Carne Asada" class="p-col-12">
+  </div>
+  <div class="p-col-2"></div>
 
 
-  <!-- <p-checkbox name="groupname" value="American" label="American" [(ngModel)]="dish_form_value.dish_cuisine" checked="false"></p-checkbox>
-  <p-checkbox name="groupname" value="Asian" label="Asian"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
-  <p-checkbox name="groupname" value="Chinese" label="Chinese"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
-  <p-checkbox name="groupname" value="Japanese" label="Japanese"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
-  <p-checkbox name="groupname" value="Italian" label="Italian"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
-  <p-checkbox name="groupname" value="Fusion" label="Fusion"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
-  <p-checkbox name="groupname" value="Other" label="Other"[(ngModel)]="dish_form_value.dish_cuisine"></p-checkbox>
+  <div class="p-col-12">
+    <label for="dish_category" class="add_dish_labels">Category:</label>
+  </div>
+  <div class="p-col-1"></div>
+  <div class="p-grid">
+    <p-radioButton name="groupname" label="Appetizer" value="Appetizer" [(ngModel)]="dish_form_value.category"
+      class="p-col-6">
+    </p-radioButton>
+    <p-radioButton name="groupname" label="Entree" value="Entree" [(ngModel)]="dish_form_value.category"
+      class="p-col-6">
+    </p-radioButton>
+    <p-radioButton name="groupname" label="Side Dish" value="Side dish" [(ngModel)]="dish_form_value.category"
+      class="p-col-6">
+    </p-radioButton>
+    <p-radioButton name="groupname" label="Dessert" value="Dessert" [(ngModel)]="dish_form_value.category"
+      class="p-col-6">
+    </p-radioButton>
+  </div>
+  <div class="p-col-6"></div>
 
-  Selected Cities: <span *ngFor="let category of dish_cuisine" style="margin-right:10px">{{category}}</span>
-<hr>
+  <div class="p-col-12">
+    <label for="dish_cuisine" class="add_dish_labels">Cuisine Type / Ethnicity</label>
+  </div>
+  <div class="p-col-1"></div>
+  <div class="p-col-9">
+    <input type="text" pInputText name="dish_cuisine" [(ngModel)]="dish_form_value.cuisine"
+      placeholder="e.g. American / Mexican / Asian / Italian, etc" class="p-col-12">
+  </div>
+  <div class="p-col-2"></div>
 
-  <span class="ui-float-label">
-    <textarea rows="5" cols="30" pInputTextarea autoResize="autoResize" class="ui-inputtext" [(ngModel)]="dish_form_value.dish_ingredients" name="form_value.ingredients"></textarea>
-    <label for="ingredients_value">Ingredients</label>
-  </span>
-  <span class="ui-float-label">
-    <textarea rows="5" cols="30" pInputTextarea autoResize="autoResize" class="ui-inputtext" [(ngModel)]="dish_form_value.dish_allergen" name="form_value.allergen"></textarea>
-    <label for="allergen_value">Allergen</label>
-  </span>
-  {{dish_form_value | json}} -->
+  <div class="p-col-12">
+    <label for="dish_ingredients" class="add_dish_labels">Ingredients</label>
+  </div>
+  <div class="p-col-1"></div>
+  <div class="p-col-9">
+    <input type="text" pInputText name="dish_ingredients" [(ngModel)]="dish_form_value.ingredients"
+      placeholder="Brief description of ingredients" class="p-col-12">
+  </div>
+  <div class="p-col-2"></div>
 
+  <div class="p-col-12">
+    <label for="dish_allergens" class="add_dish_labels">Food Allergens</label>
+  </div>
+  <div class="p-col-1"></div>
+  <div class="p-col-9">
+    <input type="text" pInputText name="dish_allergens" [(ngModel)]="dish_form_value.allergens"
+      placeholder="e.g Milk / Eggs / Fish" class="p-col-12">
+  </div>
+  <div class="p-col-2"></div>
 
+  <div class="p-col-12">
+    <label for="dish_description" class="add_dish_labels">Describe your dish (optional)</label>
+  </div>
+  <div class="p-col-1"></div>
 
+  <div class="p-col-9">
+    <textarea pInputTextarea name="dish_description" [rows]="5" [(ngModel)]="dish_form_value.description"
+      placeholder="Special recipe, ingredients, or a memorable story" class="p-col-12"></textarea>
+  </div>
+  <div class="p-col-2"></div>
+
+<div class="p-col-5"></div>
+<div class="p-col-1">
+  <button pButton type="cancel" class="email_sign-up_button ui-button-danger" label="Cancel"
+icon='pi pi-times' iconPos="left" routerLink="/"></button>
+</div>
+<div class="p-col-1">
+  <button pButton type="button" class="add_dish_preview_button ui-button-warning" label="Preview"
+  icon="pi pi-check" iconPos="left" (click)="onPreviewClick()" routerLink="add-dish-form-preview"></button>
+</div>
+<div class="p-col-5"></div>
 </form>
+
+

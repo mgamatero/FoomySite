@@ -1,0 +1,22 @@
+form{
+  padding:3em;
+}
+
+hr{
+  margin: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+}
+
+.add_dish_title{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 2.5em;
+  }
+
+.add_dish_labels{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 1.25em;
+}

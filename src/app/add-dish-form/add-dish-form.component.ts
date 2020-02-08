@@ -3,6 +3,8 @@ import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { CheckboxModule } from "primeng/checkbox";
 import { DropdownModule } from "primeng/dropdown";
+import {ButtonModule} from 'primeng/button';
+import {RadioButtonModule} from 'primeng/radiobutton';
 import {SelectItem} from 'primeng/api';
 import { JsonPipe } from '@angular/common';
 
@@ -16,8 +18,7 @@ import { JsonPipe } from '@angular/common';
 
 export class AddDishFormComponent implements OnInit {
 
-  categories: any[];
-  selectedCategory: {name:'',value:''};
+selected_category:string;
 
 
 
@@ -32,12 +33,7 @@ export class AddDishFormComponent implements OnInit {
   };
 
   constructor() {
-   this.categories = [
-     {name:'Appetizer',value:'Appetizer'},
-     {name:'Entree',value:'Entree'},
-     {name:'Side dish',value:'Side dish'},
-     {name:'Dessert',value:'Dessert'}
-    ]
+
   }
 
   ngOnInit() {
