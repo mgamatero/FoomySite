@@ -7,6 +7,7 @@ import {ButtonModule} from 'primeng/button';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {SelectItem} from 'primeng/api';
 import { JsonPipe } from '@angular/common';
+import {} from '../add-dish-form-preview/add-dish-form-preview.component';
 
 @Component({
   selector: "app-add-dish",

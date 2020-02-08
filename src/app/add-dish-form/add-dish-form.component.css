@@ -1,5 +1,5 @@
 form{
-  padding:3em;
+  padding:2em;
 }
 
 hr{
@@ -20,3 +20,49 @@ hr{
   color:rgb(50, 50, 50);
   font-size: 1.25em;
 }
+
+.preview-section{
+  margin-top: 1rem;
+border: rgb(50, 50, 50) solid 1px;
+overflow-wrap: break-word;
+padding:1rem;
+}
+
+.add_dish_preview_name {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 2em;
+}
+
+.add_dish_preview_subtext {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 1.75em;
+}
+
+.add_dish_preview_textdetails {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: .75em;
+}
+
+.add_dish_preview_title {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 2em;
+}
+
+.add-dish-finalize-button {
+  font-size: 1.5em;
+}
+
+.add_dish_labels {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 1.25em;
+}
+
+.dish_description{
+  word-wrap: break-word;
+}
+
