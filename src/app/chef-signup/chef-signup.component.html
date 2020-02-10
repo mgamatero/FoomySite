@@ -1,0 +1,163 @@
+<form class="p-grid">
+  <!-- <div>
+    {{chef_form_value|json}}
+  </div> -->
+  <div class="p-col-9">
+    <div class="chef_signup_title">
+      New Chef Page - Welcome
+    </div>
+  </div>
+  <div class="p-col-2"></div>
+  <div class="p-col-10">
+    <hr>
+  </div>
+  <div class="p-col-2"></div>
+
+
+  <div class="p-col-7">
+
+    <div class="p-col-10">
+      <label for="dish_image" class="chef_image">Add a photo url of your self</label>
+      <input type="text" pInputText name="chef_image" [(ngModel)]="chef_form_value.image" class="p-col-12">
+    </div>
+
+
+
+    <div class="p-col-10">
+      <label for="dish_name" class="chef_signup_labels">Chef Name:</label>
+      <input type="text" pInputText name="chef_name" [(ngModel)]="chef_form_value.name"
+        placeholder="Be creative here.  Users will see you under this name" class="p-col-12">
+    </div>
+    <!-- <div class="p-col-1"></div> -->
+
+
+    <div class="p-col-10">
+      <label for="chef_email" class="chef_signup_labels">Chef email address</label>
+      <div>
+        <input type="text" pInputText name="chef_email" [(ngModel)]="chef_form_value.contactEmail" class="p-col-12">
+      </div>
+    </div>
+    <div class="p-col-10">
+      <label for="chef_phone" class="chef_signup_labels">Chef phone num</label>
+      <div>
+        <input type="text" pInputText name="chef_phone" [(ngModel)]="chef_form_value.contactPhone" class="p-col-12">
+      </div>
+    </div>
+
+
+
+    <!-- <div class="p-col-12"> RADIO BUTTONS
+      <label for="dish_category" class="chef_signup_labels">City:</label>
+    </div>
+    <div class="p-col-1"></div>
+    <div class="p-grid">
+      <p-radioButton name="groupname" label="Appetizer" value="Appetizer" [(ngModel)]="chef_form_value.city"
+        class="p-col-6">
+      </p-radioButton>
+      <p-radioButton name="groupname" label="Entree" value="Entree" [(ngModel)]="chef_form_value.state"
+        class="p-col-6">
+      </p-radioButton>
+      <p-radioButton name="groupname" label="Side Dish" value="Side dish" [(ngModel)]="chef_form_value.category"
+        class="p-col-6">
+      </p-radioButton>
+      <p-radioButton name="groupname" label="Dessert" value="Dessert" [(ngModel)]="chef_form_value.category"
+        class="p-col-6">
+      </p-radioButton>
+    </div> -->
+
+    <div class="p-col-10">
+      <label for="dish_cuisine" class="chef_signup_labels">City</label>
+      <input type="text" pInputText name="dish_cuisine" [(ngModel)]="chef_form_value.city" placeholder="City"
+        class="p-col-12">
+    </div>
+    <div class="p-col-10">
+      <label for="dish_cuisine" class="chef_signup_labels">State</label>
+      <input type="text" pInputText name="dish_ingredients" [(ngModel)]="chef_form_value.state" placeholder="State"
+        class="p-col-12">
+    </div>
+
+
+
+
+
+    <div class="p-col-10">
+      <label for="dish_allergens" class="chef_signup_labels">Available Days</label>
+      <input type="text" pInputText name="dish_allergens" [(ngModel)]="chef_form_value.availableDays" placeholder="MWF"
+        class="p-col-12">
+    </div>
+
+
+
+    <div class="p-col-10">
+      <label for="dish_allergens" class="chef_signup_labels">Available Times</label>
+      <input type="text" pInputText name="dish_allergens" [(ngModel)]="chef_form_value.availableTimes"
+        placeholder="noon - 5P, Brunch, Dinner, etc" class="p-col-12">
+    </div>
+
+
+    <div class="p-col-10">
+      <label for="dish_description" class="chef_signup_labels">About Me</label>
+      <textarea pInputTextarea wrap="hard" class="chef_description" name="chef_description" [rows]="5"
+        [(ngModel)]="chef_form_value.misc" placeholder="About me, bio or brief anecdote" class="p-col-12"></textarea>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Preview Pane Starts here -->
+  <div class="p-col-5">
+    <div class="chef_preview_buttons">
+      <button pButton type="button" class="email_sign-up_button ui-button-success" label="Create Chef" icon='pi pi-plus'
+        iconPos="left" routerLink="/"></button>
+      <button pButton type="button" class="email_sign-up_button ui-button-danger" label="Cancel" icon='pi pi-times'
+        iconPos="left" routerLink="/"></button>
+    </div>
+
+    <div class="chef_preview_section">
+      <img src={{chef_form_value.image}} alt="" style="width: 50%; max-width:200px fit-content"
+        class="chef_signup_preview_image">
+      <div class="bottom-right">
+        <p>{{chef_form_value.misc}}
+        </p>
+      </div>
+      <div class="top-left p-col-align-center  chef_signup_preview_subtext">
+        {{chef_form_value.name}} - <span>{{chef_form_value.city}}, {{chef_form_value.state}}</span>
+      </div>
+      <div class="bottom-left" style="margin-left: 1rem">
+        <div>
+          <div>
+            <i class="far fa-envelope"></i>
+            {{chef_form_value.contactEmail}}
+          </div>
+          <div>
+            <i class="fas fa-phone"></i>
+            {{chef_form_value.contactPhone}}
+          </div>
+
+      </div>
+    </div>
+    <hr style="margin:2em">
+    <div class="chef_signup_preview_subtext">
+
+      Availability:
+    </div>
+    <div>
+      <i class="fas fa-calendar-alt"></i>
+      {{chef_form_value.availableDays}}
+    </div>
+    <div>
+      <i class="far fa-clock"></i>
+      {{chef_form_value.availableTimes}}
+    </div>
+  </div>
+
+
+
+  </div>
+
+</form>

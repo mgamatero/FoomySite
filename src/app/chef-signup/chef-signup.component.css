@@ -1,0 +1,84 @@
+form{
+  padding:2em;
+}
+
+hr{
+  margin: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+}
+
+.chef_signup_title{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 2em;
+  }
+
+.chef_signup_labels{
+  font-family: 'Lato', sans-serif;
+  color:rgb(50, 50, 50);
+  font-size: 1.25em;
+}
+
+.chef-preview-section{
+  margin-top: 1rem;
+border: rgb(50, 50, 50) solid 1px;
+overflow-wrap: break-word;
+padding:1rem;
+}
+
+.chef_signup_preview_name {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 2em;
+}
+
+.chef_signup_preview_subtext {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 1.75em;
+}
+
+.chef_signup_preview_textdetails {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: .75em;
+}
+
+.chef_signup_preview_title {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 2em;
+}
+
+.chef-signup-finalize-button {
+  font-size: 1.5em;
+}
+
+.chef_signup_labels {
+  font-family: "Lato", sans-serif;
+  color: rgb(50, 50, 50);
+  font-size: 1.25em;
+}
+
+.chef_description{
+  word-wrap: break-word;
+}
+
+.chef_signup_preview_image{
+  border-radius: 50%;
+  border: rgb(50, 50, 50) solid;
+}
+
+.chef_preview_buttons{
+  display: flex;
+justify-content: space-evenly;
+margin:1rem;
+}
+
+.chef_preview_section{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
