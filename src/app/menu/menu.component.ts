@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 // import {ButtonModule} from 'primeng/button';
 import {FormsModule} from '@angular/forms';
 import { AuthService } from "../services/auth.service";
-
+import { FoomiesService } from "../services/foomies.service";
 import { Router } from "@angular/router";
+import { Observable } from 'rxjs';
 
 //This all goes in auth service
 // import { AngularFireAuth } from "@angular/fire/auth";
@@ -21,16 +22,23 @@ import {ToastModule} from 'primeng/toast';
 })
 export class MenuComponent implements OnInit {
 
-
+isUserAChef:boolean;
   constructor(
     // public afAuth: AngularFireAuth,
     public afAuth: AuthService,
     private router: Router,
-    private messageService: MessageService
+    private messageService: MessageService,
+    public foommiesService: FoomiesService
     ) { }
 
   ngOnInit() {
-  }
+
+   }
+
+   ngDoChange(){
+    this.isUserAChef=this.foommiesService.isChef;
+    console.log('menu oninit' , this.isUserAChef)
+   }
 
   onLogout() {
     console.log('loggedout')

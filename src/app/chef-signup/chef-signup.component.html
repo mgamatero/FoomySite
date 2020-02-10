@@ -103,19 +103,13 @@
 
   </div>
 
-
-
-
-
-
-
   <!-- Preview Pane Starts here -->
   <div class="p-col-5">
     <div class="chef_preview_buttons">
       <button pButton type="button" class="email_sign-up_button ui-button-success" label="Create Chef" icon='pi pi-plus'
-        iconPos="left" routerLink="/"></button>
+        iconPos="left" routerLink="/" (click)="onClickChefCreate()"></button>
       <button pButton type="button" class="email_sign-up_button ui-button-danger" label="Cancel" icon='pi pi-times'
-        iconPos="left" routerLink="/"></button>
+        iconPos="left" (click)="onClickChefCancel()"></button>
     </div>
 
     <div class="chef_preview_section">
@@ -139,25 +133,21 @@
             {{chef_form_value.contactPhone}}
           </div>
 
+        </div>
+      </div>
+      <hr style="margin:2em">
+      <div class="chef_signup_preview_subtext">
+
+        Availability:
+      </div>
+      <div>
+        <i class="fas fa-calendar-alt"></i>
+        {{chef_form_value.availableDays}}
+      </div>
+      <div>
+        <i class="far fa-clock"></i>
+        {{chef_form_value.availableTimes}}
       </div>
     </div>
-    <hr style="margin:2em">
-    <div class="chef_signup_preview_subtext">
-
-      Availability:
-    </div>
-    <div>
-      <i class="fas fa-calendar-alt"></i>
-      {{chef_form_value.availableDays}}
-    </div>
-    <div>
-      <i class="far fa-clock"></i>
-      {{chef_form_value.availableTimes}}
-    </div>
   </div>
-
-
-
-  </div>
-
 </form>
