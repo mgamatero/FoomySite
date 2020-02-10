@@ -20,8 +20,7 @@ import {ToastModule} from 'primeng/toast';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-test:string;
-activeUser:boolean
+
 
   constructor(
     // public afAuth: AngularFireAuth,

@@ -37,7 +37,7 @@
     </li>
     <li  id="user-info-item">
 
-      <a href="#">{{afAuth.currentUserInfo.email}}<i class="fas fa-user"></i></a>
+      <a href="#" *ngIf="afAuth.loggedIn">{{afAuth.currentUserInfo.email}}<i class="fas fa-user"></i></a>
 
 
 

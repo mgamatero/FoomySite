@@ -10,6 +10,7 @@ export class FoomiesService {
 
 foomyCollection: AngularFirestoreCollection<FoommyInfo>;
 foommyInfo: Observable<FoommyInfo[]>;
+
   constructor(public afs: AngularFirestore) {
 this.foommyInfo = this.afs.collection<FoommyInfo>('foommies').valueChanges();
   }
