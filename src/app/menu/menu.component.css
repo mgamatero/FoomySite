@@ -22,6 +22,14 @@
  color:#5c5555;
 }
 
+.menu-links #user-info-item{
+  margin-right:2em;
+  font-size: 1.5em;
+  font-family: 'Lato';
+  color:#f3f0f0;
+  border: #bb4239;
+ }
+
 .menu-links .nav-link a:hover{
 font-weight: bolder;
  border-bottom: solid 4px #5c5555;
@@ -44,6 +52,7 @@ hr{
   color: lightgray;
   z-index: -1;
 }
+
 
 
 

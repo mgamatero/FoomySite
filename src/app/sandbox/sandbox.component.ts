@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FoomiesService} from '../services/foomies.service';
 import { FoommyInfo } from "../models/foommyinfo";
 
-
-
 @Component({
   selector: 'app-sandbox',
   templateUrl: './sandbox.component.html',
@@ -17,10 +15,6 @@ export class SandboxComponent implements OnInit {
   image:'',
   specialties:''
   }
-
-
-
-
 
   constructor(private foommyService: FoomiesService) { }
 

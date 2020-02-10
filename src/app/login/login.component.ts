@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 
   onEmailLogIn() {
     console.log("Email Login");
-    this.afAuth.login(this.email,this.password)
+    this.afAuth.emailLogin(this.email,this.password)
       // .signInWithEmailAndPassword(this.email, this.password)
       .then(success => {
         console.log("Success email");

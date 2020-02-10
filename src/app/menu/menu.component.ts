@@ -21,6 +21,7 @@ import {ToastModule} from 'primeng/toast';
 })
 export class MenuComponent implements OnInit {
 test:string;
+activeUser:boolean
 
   constructor(
     // public afAuth: AngularFireAuth,
@@ -37,7 +38,8 @@ test:string;
 
     this.afAuth.logout()
         this.messageService.add({severity:'info', summary:'You are logged out'});
-      this.router.navigate(["/"])
+      this.router.navigate([""])
           // window.alert('You are logged out')
   }
-}
+
+ }

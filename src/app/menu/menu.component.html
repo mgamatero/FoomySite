@@ -6,7 +6,7 @@
   <ul class="menu-links">
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="create-dish" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Add A Dish</a>
+        <a href="#" routerLink="create-dish" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="afAuth.loggedIn">Add A Dish</a>
       </div>
     </li>
     <li class="nav-link">
@@ -16,17 +16,17 @@
     </li>
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="sign-up" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Sign Up</a>
+        <a href="#" routerLink="sign-up" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="!afAuth.loggedIn" >Sign Up</a>
       </div>
     </li>
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"  *ngIf="!(afAuth)">Login</a>
+        <a href="#" routerLink="login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="!afAuth.loggedIn">Login</a>
       </div>
     </li>
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" (click)="onLogout()" *ngIf="(afAuth)">Logout</a>
+        <a href="#" (click)="onLogout()" *ngIf="afAuth.loggedIn">Logout</a>
         <p-toast class="ui-toast-center"></p-toast>
       </div>
     </li>
@@ -34,6 +34,14 @@
       <div class="link-item">
         <a href="#" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Why Foomy</a>
       </div>
+    </li>
+    <li  id="user-info-item">
+
+      <a href="#">{{afAuth.currentUserInfo.email}}<i class="fas fa-user"></i></a>
+
+
+
+
     </li>
   </ul>
 </div>

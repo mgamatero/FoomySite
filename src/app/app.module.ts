@@ -47,6 +47,7 @@ import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 
 import {ToastModule} from 'primeng/toast';
 import { AddDishFormPreviewComponent } from './add-dish-form-preview/add-dish-form-preview.component';
+import { ChefSignupComponent } from './chef-signup/chef-signup.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { AddDishFormPreviewComponent } from './add-dish-form-preview/add-dish-fo
     CreateDishTemporaryCRUDComponent,
     SandboxComponent,
     AddDishFormComponent,
-    AddDishFormPreviewComponent
+    AddDishFormPreviewComponent,
+    ChefSignupComponent
   ],
   imports: [
     BrowserModule,
