@@ -40,6 +40,7 @@ import { CreateDishTemporaryCRUDComponent } from "./create-dish-temporary-crud/c
 
 import { FoomiesService } from "./services/foomies.service";
 import { AuthService } from "./services/auth.service";
+import { DishService } from "./services/dish.service";
 import {MessageService} from 'primeng/api';
 
 import { SandboxComponent } from "./sandbox/sandbox.component";
@@ -97,7 +98,7 @@ import { ChefSignupComponent } from './chef-signup/chef-signup.component';
     AngularFireModule.initializeApp(environment.firebase, "FoommySite"),
     AngularFirestoreModule
   ],
-  providers: [FoomiesService, AuthService,MessageService],
+  providers: [FoomiesService, AuthService, DishService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -35,10 +35,6 @@ isUserAChef:boolean;
 
    }
 
-   ngDoChange(){
-    this.isUserAChef=this.foommiesService.isChef;
-    console.log('menu oninit' , this.isUserAChef)
-   }
 
   onLogout() {
     console.log('loggedout')

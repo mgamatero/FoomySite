@@ -4,9 +4,9 @@
   </div> -->
   <div class="p-col-9">
     <div class="add_dish_title">
-    Add A Dish
+      Add A Dish
+    </div>
   </div>
-</div>
 
 
 
@@ -16,34 +16,22 @@
     <hr>
   </div>
   <div class="p-col-2"></div>
-
-
   <div class="p-col-7">
-    <div class="p-col-12">
-      <label for="dish_image" class="add_dish_labels">Add a photo to your dish</label>
-    </div>
-    <div class="p-col-1"></div>
     <div class="p-col-10">
+      <label for="dish_image" class="add_dish_labels">Add a photo url of your dish</label>
       <input type="text" pInputText name="dish_image" [(ngModel)]="dish_form_value.image" class="p-col-12">
     </div>
-    <div class="p-col-1"></div>
 
-    <div class="p-col-12">
-      <label for="dish_name" class="add_dish_labels">Name your dish:</label>
-    </div>
-    <div class="p-col-1"></div>
     <div class="p-col-10">
+      <label for="dish_name" class="add_dish_labels">Name your dish:</label>
       <input type="text" pInputText name="dish_name" [(ngModel)]="dish_form_value.name"
         placeholder="e.g Teriyaki Chicken/Carne Asada" class="p-col-12">
     </div>
-    <div class="p-col-1"></div>
 
-
-    <div class="p-col-12">
-      <label for="dish_category" class="add_dish_labels">Category:</label>
-    </div>
-    <div class="p-col-1"></div>
     <div class="p-grid">
+      <div class="p-col-10">
+        <label for="dish_category" class="add_dish_labels">Category:</label>
+      </div>
       <p-radioButton name="groupname" label="Appetizer" value="Appetizer" [(ngModel)]="dish_form_value.category"
         class="p-col-6">
       </p-radioButton>
@@ -57,44 +45,31 @@
         class="p-col-6">
       </p-radioButton>
     </div>
-    <div class="p-col-6"></div>
 
-    <div class="p-col-12">
-      <label for="dish_cuisine" class="add_dish_labels">Cuisine Type / Ethnicity</label>
-    </div>
-    <div class="p-col-1"></div>
+
+
+
+
     <div class="p-col-10">
+      <label for="dish_cuisine" class="add_dish_labels">Cuisine Type / Ethnicity</label>
       <input type="text" pInputText name="dish_cuisine" [(ngModel)]="dish_form_value.cuisine"
         placeholder="e.g. American / Mexican / Asian / Italian, etc" class="p-col-12">
     </div>
-    <div class="p-col-1"></div>
 
-    <div class="p-col-12">
-      <label for="dish_ingredients" class="add_dish_labels">Ingredients</label>
-    </div>
-    <div class="p-col-1"></div>
     <div class="p-col-10">
+      <label for="dish_ingredients" class="add_dish_labels">Ingredients</label>
       <input type="text" pInputText name="dish_ingredients" [(ngModel)]="dish_form_value.ingredients"
         placeholder="Brief description of ingredients" class="p-col-12">
     </div>
-    <div class="p-col-1"></div>
 
-    <div class="p-col-12">
-      <label for="dish_allergens" class="add_dish_labels">Food Allergens</label>
-    </div>
-    <div class="p-col-1"></div>
     <div class="p-col-10">
+      <label for="dish_allergens" class="add_dish_labels">Food Allergens</label>
       <input type="text" pInputText name="dish_allergens" [(ngModel)]="dish_form_value.allergens"
         placeholder="e.g Milk / Eggs / Fish" class="p-col-12">
     </div>
-    <div class="p-col-1"></div>
-
-    <div class="p-col-12">
-      <label for="dish_description" class="add_dish_labels">Describe your dish (optional)</label>
-    </div>
-    <div class="p-col-1"></div>
 
     <div class="p-col-10">
+      <label for="dish_description" class="add_dish_labels">Describe your dish (optional)</label>
       <textarea pInputTextarea wrap="hard" class="dish_description" name="dish_description" [rows]="5"
         [(ngModel)]="dish_form_value.description" placeholder="Special recipe, ingredients, or a memorable story"
         class="p-col-12"></textarea>
@@ -102,34 +77,14 @@
     <div class="p-col-1"></div>
   </div>
 
-
-
-  <!-- Maybe keep for now? -->
-  <!-- <div class="p-col-5"></div>
-<div class="p-col-1">
-  <button pButton type="cancel" class="email_sign-up_button ui-button-danger" label="Cancel"
-icon='pi pi-times' iconPos="left" routerLink="/"></button>
-</div>
-<div class="p-col-1">
-  <button pButton type="button" class="add_dish_preview_button ui-button-warning" label="Preview"
-  icon="pi pi-check" iconPos="left" (click)="onPreviewClick()" routerLink="add-dish-form-preview"></button>
-</div>
-<div class="p-col-5"></div> -->
-
-
-
+  <!-- DISH PREVIEW SECTION---------------------------- -->
   <div class="p-col-5 preview-section">
-<div class="p-grid">
-  <div class="p-col-6"></div>
-  <div class="p-col-3">
-    <button pButton type="button" class="email_sign-up_button ui-button-success" label="Add Dish"
-    icon='pi pi-plus' iconPos="left" routerLink="/"></button>
-  </div>
-  <div class="p-col-3">
-    <button pButton type="button" class="email_sign-up_button ui-button-danger" label="Cancel"
-    icon='pi pi-times' iconPos="left" routerLink="/"></button>
-  </div>
-</div>
+    <div class="dish_preview_buttons">
+      <button pButton type="button" class="email_sign-up_button ui-button-success" label="Add Dish" icon='pi pi-plus'
+        iconPos="left" routerLink="/" (click)="onClickDishCreate()"></button>
+      <button pButton type="button" class="email_sign-up_button ui-button-danger" label="Cancel" icon='pi pi-times'
+        iconPos="left" routerLink="/"></button>
+    </div>
 
 
     <img src={{dish_form_value.image}} alt="" style="width: 100%; max-width:600px fit-content">

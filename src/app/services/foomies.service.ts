@@ -7,12 +7,13 @@ import {
 import { FoommyInfo } from "../models/foommyinfo";
 import { Observable } from "rxjs";
 import { AuthService } from "./auth.service";
+import { parse } from 'querystring';
 
 @Injectable({
   providedIn: "root"
 })
 export class FoomiesService {
-  isChef: boolean;
+  isChef: Observable<boolean>;
   foomyCollection: AngularFirestoreCollection<FoommyInfo>;
   foommyInfo: Observable<FoommyInfo[]>;
 
@@ -44,13 +45,22 @@ export class FoomiesService {
   }
 
   isUserAChef() {
-    let tempData = this.afs
-      .collection("person")
-      .doc(this.afAuth.currentUserInfo.uid)
-      .get();
-    tempData.subscribe(data => {
-      data.data().x.isChef === true ? this.isChef === true : this.isChef === false;
-      return data.data().x.isChef === true ? true : false;
-    });
+    // let tempData = this.afs
+    //   .collection("person")
+    //   .doc(this.afAuth.currentUserInfo.uid)
+    // //   .get();
+    // // tempData.subscribe(data => {
+    // //   data.data().x.isChef === true ? this.isChef === true : this.isChef === false;
+    // //   return data.data().x.isChef === true ? true : false;
+    // .snapshotChanges()
+    // .subscribe(data=>{
+    //   // return data.payload.
+
+    //   console.log('I am a chef',data.payload.data().x.isChef)
+    //   this.isChef=data.payload.data().x.isChef
+    //   return this.isChef
+    // })
+
+
   }
 }

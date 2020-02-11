@@ -7,7 +7,10 @@ import {ButtonModule} from 'primeng/button';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {SelectItem} from 'primeng/api';
 import { JsonPipe } from '@angular/common';
-import {} from '../add-dish-form-preview/add-dish-form-preview.component';
+import { DishService } from '../services/dish.service';
+import { AuthService } from '../services/auth.service';
+import { DishesModel} from '../models/dishmodel';
+
 
 @Component({
   selector: "app-add-dish",
@@ -19,11 +22,8 @@ import {} from '../add-dish-form-preview/add-dish-form-preview.component';
 
 export class AddDishFormComponent implements OnInit {
 
-selected_category:string;
-
-
-
   dish_form_value = {
+    createdBy: this.afAuth.currentUserInfo.uid,
     image: "",
     name: "",
     ingredients: "",
@@ -33,18 +33,24 @@ selected_category:string;
     description: ""
   };
 
-  constructor() {
-
+  constructor(private dishService:DishService,private afAuth:AuthService) {
   }
 
   ngOnInit() {
-
   }
 
-  onPreviewClick()
-  {
-    console.log('Hello')
-    localStorage.setItem('addDishFormValue',JSON.stringify(this.dish_form_value))
+  onClickDishCreate(){
+    this.dishService.addDish(this.dish_form_value)
   }
 }
 
+// export interface DishesModel{
+//   createdBy:'string',
+//   dishPhotoURL:'string',
+//   dishName:'string',
+//   category:'string',
+//   cuisineType:'string',
+//   ingredients:'string',
+//   allergens:'string',
+//   description:'string'
+//   }

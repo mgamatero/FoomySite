@@ -66,3 +66,9 @@ padding:1rem;
   word-wrap: break-word;
 }
 
+.dish_preview_buttons{
+  margin:1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
