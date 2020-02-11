@@ -27,8 +27,7 @@ export class DishService {
   addDish(x){
     return this.afs
       .collection("dishes")
-      .doc(this.afAuth.currentUserInfo.uid)
-      .set({ x })
+      .add(x)
       .then(() => {
         console.log("dish created! ", x);
       })

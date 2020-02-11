@@ -38,7 +38,7 @@ export class FoomiesService {
     return this.afs
       .collection("person")
       .doc(this.afAuth.currentUserInfo.uid)
-      .set({ x })
+      .set(x)
       .then(() => {
         console.log("chef created! ", x);
       });
