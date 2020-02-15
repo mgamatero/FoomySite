@@ -17,25 +17,18 @@ const routes: Routes = [
   { path: "", component: LandingPageComponent },
   // { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
-  { path: "login/forgot-password", component: ForgotPasswordComponent },
+  { path: "forgot-password", component: ForgotPasswordComponent },
 
   { path: "sign-up", component: SignUpComponent },
-  { path: "sign-up/add-photo", component: AddPhotoComponent },
+  // { path: "sign-up/add-photo", component: AddPhotoComponent },  --  NOT IMPLEMENTED YET
 
   { path: "become-chef", component: BecomeChefComponent },
-  { path: "become-chef/sign-up", component: ChefSignupComponent },
-  { path: "become-chef/sign-up/add-photo", component: AddPhotoComponent },
-  // { path: 'become-chef/sign-up/create-dish', component: CreateDishComponent },
+  { path: "chef-sign-up", component: ChefSignupComponent },
+  // { path: "chef-sign-up/add-photo", component: AddPhotoComponent },  -- NOT IMPLEMENTED YET
 
   { path: "create-dish", component: CreateDishComponent },
 
   { path: "add-dish-form", component: AddDishFormComponent },
-  {
-    path: "add-dish-form/add-dish-form-preview",
-    component: AddDishFormPreviewComponent
-  },
-
-  // { path: 'become-chef/create-dish', component: CreateDishComponent },
 
   { path: "**", component: NotFoundComponent }
 ];
