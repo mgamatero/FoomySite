@@ -32,17 +32,15 @@ isUserAChef:boolean;
     ) { }
 
   ngOnInit() {
-
+this.foommiesService.isUserAChef()
    }
 
 
-  onLogout() {
-    console.log('loggedout')
 
+  onLogout() {
     this.afAuth.logout()
         this.messageService.add({severity:'info', summary:'You are logged out'});
       this.router.navigate([""])
-          // window.alert('You are logged out')
-  }
+    }
 
  }

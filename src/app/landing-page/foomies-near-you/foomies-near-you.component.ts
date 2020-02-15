@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { CardModule } from "primeng/card";
 import { FoomiesService } from "../../services/foomies.service";
 import { FoommyInfo } from "../../models/foommyinfo";
-import{ SandboxComponent } from "../../sandbox/sandbox.component";
+import { SandboxComponent } from "../../sandbox/sandbox.component";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
   selector: "app-foomies-near-you",
@@ -13,7 +14,10 @@ export class FoomiesNearYouComponent implements OnInit {
   foommyFromDB: any;
   foommyinfo: FoommyInfo;
 
-  constructor(private foommyService: FoomiesService) {}
+  constructor(
+    private foommyService: FoomiesService,
+    public afAuth: AuthService
+  ) {}
 
   ngOnInit() {
     // const x: FoommyInfo = {
@@ -30,6 +34,4 @@ export class FoomiesNearYouComponent implements OnInit {
       this.foommyFromDB = foommy;
     });
   }
-
-
 }

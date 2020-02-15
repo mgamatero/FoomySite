@@ -5,10 +5,10 @@
     </div>
 
 
-<!-- <app-sandbox></app-sandbox> -->
+    <!-- <app-sandbox></app-sandbox> -->
 
-    <div>
-    <div class="p-grid">
+    <div *ngIf="afAuth.loggedIn">
+      <div class="p-grid">
         <div class="p-col-4" *ngFor="let foommy of foommyFromDB">
           <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
             <p-header>
@@ -19,5 +19,18 @@
         </div>
       </div>
     </div>
+
+    <div *ngIf="!afAuth.loggedIn">
+      <div class="p-col-4">
+        <!-- <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
+          <p-header>
+            <img src="Card" src={{foommy.image}}>
+          </p-header>
+          <div>Specialties: {{foommy.specialties}}</div>
+        </p-card> -->
+        SIGN IN TO VIEW
+      </div>
+    </div>
   </div>
+
 </section>
