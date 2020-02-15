@@ -3,11 +3,9 @@
     <div class="p-col-12 p-grid">
       <h3 class="foomies-near-you-title">Foommies near you:</h3>
     </div>
-
-
     <!-- <app-sandbox></app-sandbox> -->
-
     <div *ngIf="afAuth.loggedIn">
+      logged in
       <div class="p-grid">
         <div class="p-col-4" *ngFor="let foommy of foommyFromDB">
           <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
@@ -20,17 +18,21 @@
       </div>
     </div>
 
+
     <div *ngIf="!afAuth.loggedIn">
-      <div class="p-col-4">
-        <!-- <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
-          <p-header>
-            <img src="Card" src={{foommy.image}}>
-          </p-header>
-          <div>Specialties: {{foommy.specialties}}</div>
-        </p-card> -->
-        SIGN IN TO VIEW
+      not logged in
+      <div class="p-grid">
+        <div class="p-col-4" *ngFor="let hardCoded of hardCodedFoommy">
+          <p-card header={{hardCoded.chef_name}} subheader={{hardCoded.chef_city}} styleClass="ui-card-shadow">
+            <p-header>
+              <img src="Card" src={{hardCoded.chef_image}}>
+            </p-header>
+            <div>{{hardCoded.chef_description}}</div>
+          </p-card>
+        </div>
       </div>
     </div>
   </div>
+
 
 </section>
