@@ -29,9 +29,12 @@ export class FoomiesNearYouComponent implements OnInit {
     // };
     // this.foommyService.addFoommies(x);
 
-    this.foommyService.getFoommies().subscribe(foommy => {
-      // console.log(foommy)
-      this.foommyFromDB = foommy;
-    });
+    //ONLY USE FIREBASE IF LOGGED IN - INJECT HARDCODED DATA HERE
+    if (this.afAuth.loggedIn) {
+      this.foommyService.getFoommies().subscribe(foommy => {
+        // console.log(foommy)
+        this.foommyFromDB = foommy;
+      });
+    }
   }
 }
