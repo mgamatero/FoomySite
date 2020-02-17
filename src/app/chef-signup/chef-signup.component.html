@@ -22,10 +22,10 @@
       <input type="text" pInputText name="chef_name" formControlName="name"
         placeholder="Be creative here.  Users will see you under this name" class="p-col-12">
     </div>
-     <div class="p-col-10">
+    <div class="p-col-10">
       <label for="chef_email" class="chef_signup_labels">Chef email address</label>
       <div>
-        <input type="text" pInputText name="chef_email" formControlName ="contactEmail" class="p-col-12">
+        <input type="text" pInputText name="chef_email" formControlName="contactEmail" class="p-col-12">
       </div>
     </div>
     <div class="p-col-10">
@@ -56,18 +56,35 @@
 
     <div class="p-col-10">
       <label for="name" class="chef_signup_labels">City</label>
-      <input type="text" pInputText name="name" formControlName="city" placeholder="City"
-        class="p-col-12">
+      <input type="text" pInputText name="name" formControlName="city" placeholder="City" class="p-col-12">
     </div>
     <div class="p-col-10">
       <label for="state" class="chef_signup_labels">State</label>
-      <input type="text" pInputText name="dishstate" formControlName="state" placeholder="State"
-        class="p-col-12">
+      <input type="text" pInputText name="dishstate" formControlName="state" placeholder="State" class="p-col-12">
     </div>
     <div class="p-col-10">
       <label for="availableDays" class="chef_signup_labels">Available Days</label>
-      <input type="text" pInputText name="availableDays" formControlName="availableDays" placeholder="MWF"
-        class="p-col-12">
+      <!-- <input type="text" pInputText name="availableDays" formControlName="availableDays" placeholder="MWF"
+        class="p-col-12"> -->
+
+
+
+      <div class="p-grid">
+        <p-checkbox name="groupname" label="Sun" value="Sun" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+        <p-checkbox name="groupname" label="M" value="M" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+        <p-checkbox name="groupname" label="T" value="T" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+        <p-checkbox name="groupname" label="W" value="W" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+        <p-checkbox name="groupname" label="Th" value="Th" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+        <p-checkbox name="groupname" label="F" value="F" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+        <p-checkbox name="groupname" label="Sat" value="Sat" formControlName="availableDays" class="p-col-1">
+        </p-checkbox>
+      </div>
     </div>
     <div class="p-col-10">
       <label for="availableTimes" class="chef_signup_labels">Available Times</label>
@@ -77,17 +94,17 @@
     <div class="p-col-10">
       <label for="chef_description" class="chef_signup_labels">About Me</label>
       <textarea pInputTextarea wrap="hard" class="chef_description" name="chef_description" [rows]="5"
-      formControlName="misc" placeholder="About me, bio or brief anecdote" class="p-col-12"></textarea>
+        formControlName="misc" placeholder="About me, bio or brief anecdote" class="p-col-12"></textarea>
     </div>
   </div>
 
   <!-- Preview Pane Starts here -->
-   <div class="p-col-5">
+  <div class="p-col-5">
     <div class="chef_preview_buttons">
       <button pButton type="button" class="email_sign-up_button ui-button-success" label="Create Chef" icon='pi pi-plus'
         iconPos="left" routerLink="/" (click)="onClickChefCreate()"></button>
       <button pButton type="button" class="email_sign-up_button ui-button-danger" label="Cancel" icon='pi pi-times'
-        iconPos="left" (click)="onClickChefCancel()"></button>
+        iconPos="left" routerLink="/" (click)="onClickChefCancel()"></button>
     </div>
 
     <div class="chef_preview_section">

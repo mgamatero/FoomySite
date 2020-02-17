@@ -7,12 +7,18 @@ import { ButtonModule } from "primeng/button";
 import { RadioButtonModule } from "primeng/radiobutton";
 import { SelectItem } from "primeng/api";
 import { JsonPipe } from "@angular/common";
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  FormBuilder,
+  FormArray,
+  Validators
+} from "@angular/forms";
 
 import { Router } from "@angular/router";
 import { AuthService } from "../services/auth.service";
 
-import{ FoomiesService} from "../services/foomies.service";
+import { FoomiesService } from "../services/foomies.service";
 import { Observable } from "rxjs";
 
 @Component({
@@ -21,38 +27,29 @@ import { Observable } from "rxjs";
   styleUrls: ["./chef-signup.component.css"]
 })
 export class ChefSignupComponent implements OnInit {
-
-  // chef_form_value = {
-  //   isChef: true,
-  //   image: "http://www.free-icons-download.net/images/chef-icons-71277.png",
-  //   name: "",
-  //   city: "",
-  //   state: "",
-  //   availableDays: "",
-  //   availableTimes: "",
-  //   contactEmail: "",
-  //   contactPhone: "",
-  //   misc: ""
-  // };
-
-  chefForm:FormGroup;
-  constructor(private router: Router, private afAuth: AuthService, private foomiesService:FoomiesService, private fb:FormBuilder) {}
+  chefForm: FormGroup;
+  selectedDays:[];
+  constructor(
+    private router: Router,
+    private afAuth: AuthService,
+    private foomiesService: FoomiesService,
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit() {
-    this.chefForm=this.fb.group({
+    this.chefForm = this.fb.group({
       isChef: [true],
-    image: ["http://www.free-icons-download.net/images/chef-icons-71277.png"],
-    name: [""],
-    city: [""],
-    state: [""],
-    availableDays: [""],
-    availableTimes: [""],
-    contactEmail: [""],
-    contactPhone: [""],
-    misc: [""]
-    })
+      image: ["http://www.free-icons-download.net/images/chef-icons-71277.png"],
+      name: [""],
+      city: [""],
+      state: [""],
+      availableDays: [""] ,
+      availableTimes: [""],
+      contactEmail: [""],
+      contactPhone: [""],
+      misc: [""]
+    });
   }
-
 
   onClickChefCreate() {
     // let currId = this.afAuth.currentUserInfo.uid;
@@ -61,10 +58,7 @@ export class ChefSignupComponent implements OnInit {
   }
 
   onClickChefCancel() {
-    console.log('click')
-    // this.foomiesService.isUserAChef();
+    console.log("click Cancel");
     // // this.router.navigate(["/"]);
   }
 }
-
-
