@@ -10,6 +10,7 @@ import { JsonPipe } from '@angular/common';
 import { DishService } from '../services/dish.service';
 import { AuthService } from '../services/auth.service';
 import { DishesModel} from '../models/dishmodel';
+import { FormBuilder, FormGroup, Validator } from '@angular/forms';
 
 
 @Component({
@@ -22,35 +23,42 @@ import { DishesModel} from '../models/dishmodel';
 
 export class AddDishFormComponent implements OnInit {
 
-  dish_form_value = {
-    createdBy: this.afAuth.currentUserInfo.uid,
-    image: "",
-    name: "",
-    ingredients: "",
-    category: "",
-    cuisine: "",
-    allergens: "",
-    description: ""
-  };
+  addDishForm:FormGroup;
 
-  constructor(private dishService:DishService,private afAuth:AuthService) {
+
+  // dish_form_value = {
+  //   createdBy: this.afAuth.currentUserInfo.uid,
+  //   image: "",
+  //   name: "",
+  //   ingredients: "",
+  //   category: "",
+  //   cuisine: "",
+  //   allergens: "",
+  //   description: ""
+  // };
+
+  constructor(private dishService:DishService,
+    private afAuth:AuthService,
+    private fb: FormBuilder
+    ) {
   }
 
   ngOnInit() {
+    this.addDishForm = this.fb.group({
+      createdBy:[this.afAuth.currentUserInfo.uid],
+      image: [""],
+      name: [""],
+      ingredients: [""],
+      category: [""],
+      cuisine: [""],
+      allergens: [""],
+      description: [""]
+    })
   }
 
   onClickDishCreate(){
-    this.dishService.addDish(this.dish_form_value)
+    this.dishService.addDish(this.addDishForm.value)
   }
 }
 
-// export interface DishesModel{
-//   createdBy:'string',
-//   dishPhotoURL:'string',
-//   dishName:'string',
-//   category:'string',
-//   cuisineType:'string',
-//   ingredients:'string',
-//   allergens:'string',
-//   description:'string'
-//   }
+

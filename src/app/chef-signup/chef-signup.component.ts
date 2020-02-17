@@ -28,7 +28,8 @@ import { Observable } from "rxjs";
 })
 export class ChefSignupComponent implements OnInit {
   chefForm: FormGroup;
-  selectedDays:[];
+  days: FormArray;
+
   constructor(
     private router: Router,
     private afAuth: AuthService,
@@ -40,25 +41,53 @@ export class ChefSignupComponent implements OnInit {
     this.chefForm = this.fb.group({
       isChef: [true],
       image: ["http://www.free-icons-download.net/images/chef-icons-71277.png"],
-      name: [""],
-      city: [""],
-      state: [""],
-      availableDays: [""] ,
-      availableTimes: [""],
-      contactEmail: [""],
-      contactPhone: [""],
-      misc: [""]
+      name: ["",Validators.required],
+      city: ["",Validators.required],
+      state: ["",Validators.required],
+      availableDays:[this.days,Validators.required],
+      // availableDays: this.fb.array([
+      //   this.fb.control('')
+      // ]) ,
+      availableTimes: ["",Validators.required],
+      contactEmail: ["",Validators.email],
+      contactPhone: ["",Validators.required,Validators],
+      misc: ["",Validators.required]
     });
   }
+
+
 
   onClickChefCreate() {
     // let currId = this.afAuth.currentUserInfo.uid;
     console.log(this.chefForm.value);
     this.foomiesService.createChef(this.chefForm.value);
+
   }
 
   onClickChefCancel() {
     console.log("click Cancel");
     // // this.router.navigate(["/"]);
+  }
+
+  availDaysClick(){
+
+    console.log(event.target)
+    // if(event.target.checked){
+    //   //add
+    //   console.log('click')
+    //   this.chefForm.value.availableDays.push(new FormControl(event.target.value))
+    // }
+    // else{
+    //   let i = 0;
+
+    //   this.chefForm.value.availableDays.array.forEach(element => {
+    //     if (element.value == event.target.value) {
+    //       //remove
+    //       this.chefForm.value.availableDays.remove(i);
+    //       return
+    //     }
+    //     i++;
+    //   });
+    // }
   }
 }

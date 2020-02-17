@@ -28,6 +28,7 @@ export class DishService {
     return this.afs
       .collection("dishes")
       .add(x)
+
       .then(() => {
         console.log("dish created! ", x);
       })

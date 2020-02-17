@@ -15,7 +15,7 @@ import { AddDishFormPreviewComponent } from "./add-dish-form-preview/add-dish-fo
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
-  // { path: '', redirectTo: '/', pathMatch: 'full' },
+  // { path: '', redirectTo: '/', pathMatch: 'full' },  -- DUNNO WHAT THIS DOES
   { path: "login", component: LoginComponent },
   { path: "forgot-password", component: ForgotPasswordComponent },
 

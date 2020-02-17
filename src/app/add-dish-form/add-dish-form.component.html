@@ -1,16 +1,12 @@
-<form class="p-grid">
-  <!-- <div>
-    {{dish_form_value|json}}
-  </div> -->
+<form class="p-grid" [formGroup]="addDishForm">
+  <div>
+    <!-- {{addDishForm|json}} -->
+  </div>
   <div class="p-col-9">
     <div class="add_dish_title">
       Add A Dish
     </div>
   </div>
-
-
-
-
   <div class="p-col-2"></div>
   <div class="p-col-10">
     <hr>
@@ -19,12 +15,12 @@
   <div class="p-col-7">
     <div class="p-col-10">
       <label for="dish_image" class="add_dish_labels">Add a photo url of your dish</label>
-      <input type="text" pInputText name="dish_image" [(ngModel)]="dish_form_value.image" class="p-col-12">
+      <input type="text" pInputText name="dish_image" formControlName="image" class="p-col-12">
     </div>
 
     <div class="p-col-10">
       <label for="dish_name" class="add_dish_labels">Name your dish:</label>
-      <input type="text" pInputText name="dish_name" [(ngModel)]="dish_form_value.name"
+      <input type="text" pInputText name="dish_name" formControlName="name"
         placeholder="e.g Teriyaki Chicken/Carne Asada" class="p-col-12">
     </div>
 
@@ -32,16 +28,16 @@
       <div class="p-col-10">
         <label for="dish_category" class="add_dish_labels">Category:</label>
       </div>
-      <p-radioButton name="groupname" label="Appetizer" value="Appetizer" [(ngModel)]="dish_form_value.category"
+      <p-radioButton name="groupname" label="Appetizer" value="Appetizer" formControlName="category"
         class="p-col-6">
       </p-radioButton>
-      <p-radioButton name="groupname" label="Entree" value="Entree" [(ngModel)]="dish_form_value.category"
+      <p-radioButton name="groupname" label="Entree" value="Entree" formControlName="category"
         class="p-col-6">
       </p-radioButton>
-      <p-radioButton name="groupname" label="Side Dish" value="Side dish" [(ngModel)]="dish_form_value.category"
+      <p-radioButton name="groupname" label="Side Dish" value="Side dish" formControlName="category"
         class="p-col-6">
       </p-radioButton>
-      <p-radioButton name="groupname" label="Dessert" value="Dessert" [(ngModel)]="dish_form_value.category"
+      <p-radioButton name="groupname" label="Dessert" value="Dessert" formControlName="category"
         class="p-col-6">
       </p-radioButton>
     </div>
@@ -52,26 +48,26 @@
 
     <div class="p-col-10">
       <label for="dish_cuisine" class="add_dish_labels">Cuisine Type / Ethnicity</label>
-      <input type="text" pInputText name="dish_cuisine" [(ngModel)]="dish_form_value.cuisine"
+      <input type="text" pInputText name="dish_cuisine" formControlName="cuisine"
         placeholder="e.g. American / Mexican / Asian / Italian, etc" class="p-col-12">
     </div>
 
     <div class="p-col-10">
       <label for="dish_ingredients" class="add_dish_labels">Ingredients</label>
-      <input type="text" pInputText name="dish_ingredients" [(ngModel)]="dish_form_value.ingredients"
+      <input type="text" pInputText name="dish_ingredients" formControlName="ingredients"
         placeholder="Brief description of ingredients" class="p-col-12">
     </div>
 
     <div class="p-col-10">
       <label for="dish_allergens" class="add_dish_labels">Food Allergens</label>
-      <input type="text" pInputText name="dish_allergens" [(ngModel)]="dish_form_value.allergens"
+      <input type="text" pInputText name="dish_allergens" formControlName="allergens"
         placeholder="e.g Milk / Eggs / Fish" class="p-col-12">
     </div>
 
     <div class="p-col-10">
       <label for="dish_description" class="add_dish_labels">Describe your dish (optional)</label>
       <textarea pInputTextarea wrap="hard" class="dish_description" name="dish_description" [rows]="5"
-        [(ngModel)]="dish_form_value.description" placeholder="Special recipe, ingredients, or a memorable story"
+      formControlName="description" placeholder="Special recipe, ingredients, or a memorable story"
         class="p-col-12"></textarea>
     </div>
     <div class="p-col-1"></div>
@@ -87,27 +83,27 @@
     </div>
 
 
-    <img src={{dish_form_value.image}} alt="" style="width: 100%; max-width:600px fit-content">
+    <img src={{addDishForm.value.image}} alt="" style="width: 100%; max-width:600px fit-content">
     <div class="bottom-right add_dish_preview_subtext">
-      <p>{{dish_form_value.description}}
+      <p>{{addDishForm.value.description}}
       </p>
     </div>
     <div class="top-left p-col-align-center add_dish_preview_name">
-      {{dish_form_value.name}}
+      {{addDishForm.value.name}}
     </div>
     <div class="bottom-left add_dish_preview_subtext" style="margin-left: 1rem">
       <div class="add_dish_preview_textdetails">
         <div>
           <i class="fas fa-utensils"></i>
-          {{dish_form_value.category}}
+          {{addDishForm.value.category}}
         </div>
         <div>
           <i class="fas fa-concierge-bell"></i>
-          {{dish_form_value.cuisine}}
+          {{addDishForm.value.cuisine}}
         </div>
         <div>
           <i class="fas fa-fish"></i>
-          {{dish_form_value.allergens}}
+          {{addDishForm.value.allergens}}
         </div>
       </div>
     </div>
@@ -117,15 +113,7 @@
       Main Ingredients:
     </div>
     <div class="add_dish_preview_textdetails" style="margin-left: 1rem">
-      {{dish_form_value.ingredients}}
+      {{addDishForm.value.ingredients}}
     </div>
-
-
-
-
   </div>
-
-
-
-
 </form>
