@@ -1,8 +1,8 @@
 <form class="login_form" [formGroup]="loginForm">
   <p class="login_text">Log in with:</p>
   <div class="social_media_login_section">
-    <button pButton type="button" class="social_media_button" label="Google" icon='fab fa-google'
-      iconPos="left" (click)="onGoogleLogin()"></button>
+    <button pButton type="button" class="social_media_button" label="Google" icon='fab fa-google' iconPos="left"
+      (click)="onGoogleLogin()"></button>
     <button pButton type="button" class="social_media_button" label="Facebook" icon='fab fa-facebook-square'
       iconPos="left" disabled></button>
   </div>
@@ -10,35 +10,31 @@
   <p class="login_text">Or continue with:</p>
   <div class="email_login_section p-grid">
     <div class="p-col-4"></div>
-    <div class="p-col-4">
-      <div class="ui-float-label">
-        <input id="float-input-email" type="text" pInputText
-          class="email_text_box" formControlName="email" [(ngModel)]="email">
 
-        <label for="float-input-email">Email</label>
+      <div class="p-col-4">
+        <div class="ui-float-label">
+          <input id="float-input-email" type="text" pInputText class="email_text_box" formControlName="email">
+
+          <label for="float-input-email">Email</label>
+        </div>
+        <span class="errMessage" *ngIf="loginForm.controls['email'].invalid">Email is required</span>
       </div>
-      <span class="errMessage" *ngIf="loginForm.controls['email'].invalid">Email is required</span>
-    </div>
-    <div class="p-col-4"></div>
+      <div class="p-col-4"></div>
 
-        <div class="p-col-4"></div>
-    <div class="p-col-4">
-      <div class="ui-float-label">
-        <input id="float-input-password" type="text" pInputText
-          class="email_text_box" formControlName="password" [(ngModel)]="password">
+      <div class="p-col-4"></div>
+      <div class="p-col-4">
+        <div class="ui-float-label">
+          <input id="float-input-password" type="text" pInputText class="email_text_box" formControlName="password">
 
-        <label for="float-input-password">Password</label>
+          <label for="float-input-password">Password</label>
+        </div>
+        <span class="errMessage" *ngIf="loginForm.controls['password'].invalid">Password is required</span>
       </div>
-      <span class="errMessage" *ngIf="loginForm.controls['password'].invalid">Password is required</span>
-    </div>
-    <div class="p-col-4"></div>
-
+      <div class="p-col-4"></div>
 
     <div>
       <button pButton type="submit" class="email_login_button" label="Submit" icon='pi pi-check' iconPos="left"
-        [disabled]="loginForm.invalid"
-        (click)="onEmailLogIn()"
-        >
+        [disabled]="loginForm.invalid" (click)="onEmailLogIn()">
       </button>
       <p-toast></p-toast>
       <button pButton type="submit" class="email_login_button ui-button-danger" label="Forgot Password?"

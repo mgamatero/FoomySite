@@ -27,7 +27,7 @@
     <li class="nav-link">
       <div class="link-item">
         <a href="#" (click)="onLogout()" *ngIf="afAuth.loggedIn">Logout</a>
-        <p-toast class="ui-toast-center"></p-toast>
+        <!-- <p-toast class="ui-toast-center"></p-toast> -->
       </div>
     </li>
     <li class="nav-link">
@@ -36,14 +36,10 @@
       </div>
     </li>
     <li  id="user-info-item">
-
       <a href="#" *ngIf="afAuth.loggedIn">{{afAuth.currentUserInfo.email}}<i class="fas fa-user"></i></a>
-
-
-
-
     </li>
   </ul>
 </div>
 <hr>
+<p-toast class="ui-toast-center"></p-toast>
 
