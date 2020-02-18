@@ -11,25 +11,19 @@ import { BecomeChefComponent } from "./become-chef/become-chef.component";
 import { ChefSignupComponent } from "./chef-signup/chef-signup.component";
 import { CreateDishComponent } from "./create-dish/create-dish.component";
 import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
-import { AddDishFormPreviewComponent } from "./add-dish-form-preview/add-dish-form-preview.component";
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
   // { path: '', redirectTo: '/', pathMatch: 'full' },  -- DUNNO WHAT THIS DOES
   { path: "login", component: LoginComponent },
   { path: "forgot-password", component: ForgotPasswordComponent },
-
   { path: "sign-up", component: SignUpComponent },
   // { path: "sign-up/add-photo", component: AddPhotoComponent },  --  NOT IMPLEMENTED YET
-
   { path: "become-chef", component: BecomeChefComponent },
   { path: "chef-sign-up", component: ChefSignupComponent },
   // { path: "chef-sign-up/add-photo", component: AddPhotoComponent },  -- NOT IMPLEMENTED YET
-
   { path: "create-dish", component: CreateDishComponent },
-
   { path: "add-dish-form", component: AddDishFormComponent },
-
   { path: "**", component: NotFoundComponent }
 ];
 

@@ -47,8 +47,8 @@ import { SandboxComponent } from "./sandbox/sandbox.component";
 import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 
 import {ToastModule} from 'primeng/toast';
-import { AddDishFormPreviewComponent } from './add-dish-form-preview/add-dish-form-preview.component';
 import { ChefSignupComponent } from './chef-signup/chef-signup.component';
+import { ChefService } from './services/chef.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +71,6 @@ import { ChefSignupComponent } from './chef-signup/chef-signup.component';
     CreateDishTemporaryCRUDComponent,
     SandboxComponent,
     AddDishFormComponent,
-    AddDishFormPreviewComponent,
     ChefSignupComponent
   ],
   imports: [
@@ -92,14 +91,13 @@ import { ChefSignupComponent } from './chef-signup/chef-signup.component';
     ToastModule,
 
     AngularFireModule,
-    // AngularFireAnalyticsModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase, "FoommySite"),
     AngularFirestoreModule
   ],
-  providers: [FoomiesService, AuthService, DishService, MessageService],
+  providers: [FoomiesService, AuthService, DishService, MessageService, ChefService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

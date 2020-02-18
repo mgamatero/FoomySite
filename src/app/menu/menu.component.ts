@@ -22,10 +22,17 @@ export class MenuComponent implements OnInit {
     private router: Router,
     private messageService: MessageService,
     public foommiesService: FoomiesService,
-    private chefService: ChefService
-  ) {}
+    public chefService: ChefService
+  ) {
 
-  ngOnInit() {}
+  }
+
+  ngOnInit() {
+this.chefService.isCurrentUserAChef().subscribe(data=>{
+  console.log('Is user a chef? ',data)
+  this.isUserAChef = data
+})
+  }
 
   onLogout() {
     this.afAuth.logout();
@@ -35,4 +42,8 @@ export class MenuComponent implements OnInit {
     });
     this.router.navigate([""]);
   }
+
+
 }
+
+

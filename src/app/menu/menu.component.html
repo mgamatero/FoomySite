@@ -13,7 +13,7 @@
     <li class="nav-link">
       <div class="link-item">
         <a href="#" routerLink="become-chef" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
-          *ngIf="afAuth.loggedIn">Become A Chef</a>
+          *ngIf="afAuth.loggedIn && !isUserAChef">Become A Chef</a>
       </div>
     </li>
     <li class="nav-link">
