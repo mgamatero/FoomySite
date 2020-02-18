@@ -14,6 +14,7 @@ import {
   FormArray,
   Validators
 } from "@angular/forms";
+import { ChefService } from "../services/chef.service";
 
 import { Router } from "@angular/router";
 import { AuthService } from "../services/auth.service";
@@ -34,34 +35,32 @@ export class ChefSignupComponent implements OnInit {
     private router: Router,
     private afAuth: AuthService,
     private foomiesService: FoomiesService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private chefService:ChefService
   ) {}
 
   ngOnInit() {
     this.chefForm = this.fb.group({
       isChef: [true],
       image: ["http://www.free-icons-download.net/images/chef-icons-71277.png"],
-      name: ["",Validators.required],
-      city: ["",Validators.required],
-      state: ["",Validators.required],
-      availableDays:[this.days,Validators.required],
+      name: ["", Validators.required],
+      city: ["", Validators.required],
+      state: ["", Validators.required],
+      availableDays: [this.days, Validators.required],
       // availableDays: this.fb.array([
       //   this.fb.control('')
       // ]) ,
-      availableTimes: ["",Validators.required],
-      contactEmail: ["",Validators.email],
-      contactPhone: ["",Validators.required,Validators],
-      misc: ["",Validators.required]
+      availableTimes: ["", Validators.required],
+      contactEmail: ["", Validators.email],
+      contactPhone: ["", Validators.required, Validators],
+      misc: ["", Validators.required]
     });
   }
-
-
 
   onClickChefCreate() {
     // let currId = this.afAuth.currentUserInfo.uid;
     console.log(this.chefForm.value);
-    this.foomiesService.createChef(this.chefForm.value);
-
+    this.chefService.createChef(this.chefForm.value);
   }
 
   onClickChefCancel() {
@@ -69,9 +68,8 @@ export class ChefSignupComponent implements OnInit {
     // // this.router.navigate(["/"]);
   }
 
-  availDaysClick(){
-
-    console.log(event.target)
+  availDaysClick() {
+    console.log();
     // if(event.target.checked){
     //   //add
     //   console.log('click')

@@ -1,33 +1,36 @@
 <div class="menu">
   <div class="logo">
-    <img src="../../../assets/images/icon-foommy.png" routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" alt="" width="100px">
+    <img src="../../../assets/images/icon-foommy.png" routerLink="/" [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{exact: true}" alt="" width="100px">
   </div>
-
   <ul class="menu-links">
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="create-dish" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="afAuth.loggedIn">Add A Dish</a>
+        <a href="#" routerLink="create-dish" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
+          *ngIf="afAuth.loggedIn">Add A Dish</a>
       </div>
     </li>
     <li class="nav-link">
       <div class="link-item">
-      <a href="#" routerLink="become-chef" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="afAuth.loggedIn">Become A Chef</a>
+        <a href="#" routerLink="become-chef" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
+          *ngIf="afAuth.loggedIn">Become A Chef</a>
       </div>
     </li>
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="sign-up" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="!afAuth.loggedIn" >Sign Up</a>
+        <a href="#" routerLink="sign-up" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
+          *ngIf="!afAuth.loggedIn">Sign Up</a>
       </div>
     </li>
     <li class="nav-link">
       <div class="link-item">
-        <a href="#" routerLink="login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" *ngIf="!afAuth.loggedIn">Login</a>
+        <a href="#" routerLink="login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
+          *ngIf="!afAuth.loggedIn">Login</a>
       </div>
     </li>
     <li class="nav-link">
       <div class="link-item">
         <a href="#" (click)="onLogout()" *ngIf="afAuth.loggedIn">Logout</a>
-        <!-- <p-toast class="ui-toast-center"></p-toast> -->
       </div>
     </li>
     <li class="nav-link">
@@ -35,11 +38,10 @@
         <a href="#" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Why Foomy</a>
       </div>
     </li>
-    <li  id="user-info-item">
+    <li id="user-info-item">
       <a href="#" *ngIf="afAuth.loggedIn">{{afAuth.currentUserInfo.email}}<i class="fas fa-user"></i></a>
     </li>
   </ul>
 </div>
 <hr>
 <p-toast class="ui-toast-center"></p-toast>
-

@@ -7,12 +7,12 @@
     <div *ngIf="afAuth.loggedIn">
       logged in
       <div class="p-grid">
-        <div class="p-col-4" *ngFor="let foommy of foommyFromDB">
-          <p-card header={{foommy.title}} subheader={{foommy.address}} styleClass="ui-card-shadow">
+        <div class="p-col-3" *ngFor="let chef of chefFromDB">
+          <p-card header={{chef.name}} subheader={{chef.misc}} styleClass="ui-card-shadow">
             <p-header>
-              <img src="Card" src={{foommy.image}}>
+              <img src="Card" src={{chef.image}}>
             </p-header>
-            <div>Specialties: {{foommy.specialties}}</div>
+            <div>{{chef.city}}, {{chef.state}}</div>
           </p-card>
         </div>
       </div>
@@ -23,11 +23,11 @@
       not logged in
       <div class="p-grid">
         <div class="p-col-4" *ngFor="let hardCoded of hardCodedFoommy">
-          <p-card header={{hardCoded.chef_name}} subheader={{hardCoded.chef_city}} styleClass="ui-card-shadow">
+          <p-card header={{hardCoded.name}} subheader={{hardCoded.misc}} styleClass="ui-card-shadow">
             <p-header>
-              <img src="Card" src={{hardCoded.chef_image}}>
+              <img src="Card" src={{hardCoded.image}}>
             </p-header>
-            <div>{{hardCoded.chef_description}}</div>
+            <div>{{hardCoded.city}}, {{hardCoded.state}}</div>
           </p-card>
         </div>
       </div>
