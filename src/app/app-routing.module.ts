@@ -11,6 +11,7 @@ import { BecomeChefComponent } from "./become-chef/become-chef.component";
 import { ChefSignupComponent } from "./chef-signup/chef-signup.component";
 import { CreateDishComponent } from "./create-dish/create-dish.component";
 import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
+import { ChefDetailsComponent } from "./chef-details/chef-details.component";
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
@@ -24,6 +25,9 @@ const routes: Routes = [
   // { path: "chef-sign-up/add-photo", component: AddPhotoComponent },  -- NOT IMPLEMENTED YET
   { path: "create-dish", component: CreateDishComponent },
   { path: "add-dish-form", component: AddDishFormComponent },
+
+  { path: "temp-key-here/chef-details", component:ChefDetailsComponent },
+
   { path: "**", component: NotFoundComponent }
 ];
 

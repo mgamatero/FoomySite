@@ -19,8 +19,8 @@ import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { CardModule } from "primeng/card";
 import { CheckboxModule } from "primeng/checkbox";
-import {DropdownModule} from 'primeng/dropdown';
-import {RadioButtonModule} from 'primeng/radiobutton';
+import { DropdownModule } from "primeng/dropdown";
+import { RadioButtonModule } from "primeng/radiobutton";
 
 import { HowItWorksComponent } from "./landing-page/how-it-works/how-it-works.component";
 import { FoomiesNearYouComponent } from "./landing-page/foomies-near-you/foomies-near-you.component";
@@ -41,14 +41,15 @@ import { CreateDishTemporaryCRUDComponent } from "./create-dish-temporary-crud/c
 import { FoomiesService } from "./services/foomies.service";
 import { AuthService } from "./services/auth.service";
 import { DishService } from "./services/dish.service";
-import {MessageService} from 'primeng/api';
+import { MessageService } from "primeng/api";
 
 import { SandboxComponent } from "./sandbox/sandbox.component";
 import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 
-import {ToastModule} from 'primeng/toast';
-import { ChefSignupComponent } from './chef-signup/chef-signup.component';
-import { ChefService } from './services/chef.service';
+import { ToastModule } from "primeng/toast";
+import { ChefSignupComponent } from "./chef-signup/chef-signup.component";
+import { ChefService } from "./services/chef.service";
+import { ChefDetailsComponent } from "./chef-details/chef-details.component";
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { ChefService } from './services/chef.service';
     CreateDishTemporaryCRUDComponent,
     SandboxComponent,
     AddDishFormComponent,
-    ChefSignupComponent
+    ChefSignupComponent,
+    ChefDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +99,13 @@ import { ChefService } from './services/chef.service';
     AngularFireModule.initializeApp(environment.firebase, "FoommySite"),
     AngularFirestoreModule
   ],
-  providers: [FoomiesService, AuthService, DishService, MessageService, ChefService],
+  providers: [
+    FoomiesService,
+    AuthService,
+    DishService,
+    MessageService,
+    ChefService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

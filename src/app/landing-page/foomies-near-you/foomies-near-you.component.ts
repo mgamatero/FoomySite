@@ -51,4 +51,8 @@ export class FoomiesNearYouComponent implements OnInit {
       this.chefFromDB = chef;
     });
   }
+
+  clickChefDetails(){
+    console.log('clickChefDetails!')
+  }
 }
