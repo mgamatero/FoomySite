@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: "create-dish", component: CreateDishComponent },
   { path: "add-dish-form", component: AddDishFormComponent },
 
-  { path: "temp-key-here/chef-details", component:ChefDetailsComponent },
+  { path: "chef-details/:id", component:ChefDetailsComponent },
 
   { path: "**", component: NotFoundComponent }
 ];

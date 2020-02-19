@@ -1,4 +1,5 @@
   export interface ChefInfoModel{
+    id:string,
     isChef: boolean,
   image:string,
   name: string,

@@ -8,12 +8,13 @@
       logged in
       <div class="p-grid">
         <div class="p-col-3" *ngFor="let chef of chefFromDB">
-          <p-card header={{chef.name}} subheader={{chef.misc}} styleClass="ui-card-shadow" (click)="clickChefDetails()"
-          routerLink="temp-key-here/chef-details" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <p-card header={{chef.name}} subheader={{chef.misc}} styleClass="ui-card-shadow" id={{chef.id}} (click)="clickChefDetails(chef)"
+          [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
             <p-header>
               <img src="Card" src={{chef.image}}>
             </p-header>
             <div>{{chef.city}}, {{chef.state}}</div>
+            <!-- id is = {{chef.id}} -->
           </p-card>
         </div>
       </div>

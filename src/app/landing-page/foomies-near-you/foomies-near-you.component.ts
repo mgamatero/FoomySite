@@ -1,11 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { CardModule } from "primeng/card";
-import { FoomiesService } from "../../services/foomies.service";
-import { FoommyInfo } from "../../models/foommyinfo";
+// import { FoomiesService } from "../../services/foomies.service";
+// import { FoommyInfo } from "../../models/foommyinfo";
 import { ChefService } from "../../services/chef.service";
 import { ChefInfoModel } from "../../models/chef";
 import { SandboxComponent } from "../../sandbox/sandbox.component";
 import { AuthService } from "../../services/auth.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-foomies-near-you",
@@ -38,10 +39,10 @@ export class FoomiesNearYouComponent implements OnInit {
   ];
 
   constructor(
-    private foommyService: FoomiesService,
+    // private foommyService: FoomiesService,
     public afAuth: AuthService,
     private chefService: ChefService,
-
+    private router:Router
   ) {}
 
   ngOnInit() {
@@ -52,7 +53,9 @@ export class FoomiesNearYouComponent implements OnInit {
     });
   }
 
-  clickChefDetails(){
-    console.log('clickChefDetails!')
+  clickChefDetails(chef){
+    console.log(chef);
+    this.router.navigate(['/chef-details',chef.id])
+
   }
 }

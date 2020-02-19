@@ -43,17 +43,18 @@ export class ChefSignupComponent implements OnInit {
     this.chefForm = this.fb.group({
       isChef: [true],
       image: ["http://www.free-icons-download.net/images/chef-icons-71277.png"],
-      name: ["", Validators.required],
-      city: ["", Validators.required],
-      state: ["", Validators.required],
-      availableDays: [this.days, Validators.required],
+      name: [""],
+      city: [""],
+      state: [""],
+      availableDays: [this.days],
       // availableDays: this.fb.array([
       //   this.fb.control('')
       // ]) ,
-      availableTimes: ["", Validators.required],
-      contactEmail: ["", Validators.email],
-      contactPhone: ["", Validators.required, Validators],
-      misc: ["", Validators.required]
+      availableTimes: [""],
+      contactEmail: [""],
+      contactPhone: [""],
+      misc: [""],
+      id:this.afAuth.currentUserInfo.uid as string
     });
   }
 
@@ -61,6 +62,7 @@ export class ChefSignupComponent implements OnInit {
     // let currId = this.afAuth.currentUserInfo.uid;
     console.log(this.chefForm.value);
     this.chefService.createChef(this.chefForm.value);
+    this.chefService.createChef("id:this.afAuth.currentUserInfo.uid");
   }
 
   onClickChefCancel() {
