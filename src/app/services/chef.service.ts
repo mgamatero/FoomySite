@@ -7,7 +7,7 @@ import {
 import { ChefInfoModel } from "../models/chef";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-import { of } from 'rxjs'
+import { of } from 'rxjs';
 import { AuthService } from "./auth.service";
 
 @Injectable({
@@ -16,6 +16,7 @@ import { AuthService } from "./auth.service";
 export class ChefService {
   chefCollection: AngularFirestoreCollection<ChefInfoModel>;
   chefInfo: Observable<ChefInfoModel[]>;
+  singleChefInfo:Observable<any>;
   chefOrNot: Observable<boolean>;
   user:any
 
@@ -37,6 +38,15 @@ export class ChefService {
   getChef() {
     return this.chefInfo;
   }
+
+  getSingleChef(chefID:string):Observable<any>{
+// return this.afs
+// .doc(`person/${chefID}`)
+
+this.singleChefInfo =
+this.afs.doc(`person/${chefID}`).get()
+return of(this.singleChefInfo);
+}
 
 
   createChef(x: any) {
