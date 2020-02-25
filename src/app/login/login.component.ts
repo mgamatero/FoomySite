@@ -7,7 +7,6 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 // import { AngularFireAuth } from "@angular/fire/auth";
 import { AuthService } from "../services/auth.service";
 
-
 import { auth } from "firebase/app";
 import { Router } from "@angular/router";
 
@@ -42,11 +41,15 @@ export class LoginComponent implements OnInit {
 
   onEmailLogIn() {
     console.log("Email Login");
-    this.afAuth.emailLogin(this.loginForm.value.email,this.loginForm.value.password)
+    this.afAuth
+      .emailLogin(this.loginForm.value.email, this.loginForm.value.password)
       // .signInWithEmailAndPassword(this.email, this.password)
       .then(success => {
         console.log("Success email");
-        this.messageService.add({ severity:'success', summary:'You are logged in'})
+        this.messageService.add({
+          severity: "success",
+          summary: "You are logged in"
+        });
         this.router.navigate(["/"]);
       })
       .catch(err => {
@@ -55,10 +58,13 @@ export class LoginComponent implements OnInit {
   }
 
   onGoogleLogin() {
-    console.log("Google Login");
-    this.afAuth.googleLogin();
-    this.messageService.add({ severity:'success', summary:'You are logged in'})
-    this.router.navigate(["/"]);
-    window.alert("You are logged in");
+    this.afAuth.googleLogin().then(success => {
+      console.log("Google Login");
+      this.messageService.add({
+        severity: "success",
+        summary: "You are logged in"
+      });
+      this.router.navigate(["/"]);
+    });
   }
 }
