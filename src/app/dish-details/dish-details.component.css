@@ -1,0 +1,32 @@
+.dish-details-page{
+  margin:3rem;
+}
+
+.dish-details{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding:5rem;
+}
+
+.dish-details-chefimage{
+  display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.dish-chefimage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-section-left-detail{
+  margin-top: 3rem;
+}
+
+.dish-detail-desc{
+  padding:1rem;
+  background-color: bisque;
+  letter-spacing: .2rem;
+}

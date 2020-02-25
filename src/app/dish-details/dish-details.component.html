@@ -1,1 +1,54 @@
 <p>DISH ID is ====> {{dish_id}}</p>
+
+<div class="dish-details-page p-grid">
+  <div class="p-col-6 left-section">
+    <div class="global-title" style="display:flex; justify-content: center">
+      {{temp_dish.name}}
+    </div>
+    <div class="dish-details-chefimage">
+      <div class="dish-details">
+        <div>
+          <i class="fas fa-utensils"></i>
+          {{temp_dish.category}}
+        </div>
+        <div>
+          <i class="fas fa-concierge-bell"></i>
+          {{temp_dish.cuisine}}
+        </div>
+        <div>
+          <i class="fas fa-fish"></i>
+          {{temp_dish.allergens}}
+        </div>
+      </div>
+      <div class="dish-chefimage">
+        <img src={{temp_dish.chef_image}} alt="" style="max-width: 20vh; border-radius: 50%;">
+        {{temp_dish.chef_name}}
+      </div>
+    </div>
+    <hr>
+    <div class="text-section-left">
+      <div class="global-subtitle text-section-left-detail">
+        Main ingredients
+      </div>
+      <div>
+        {{temp_dish.ingredients}}
+      </div>
+      <div class="global-subtitle text-section-left-detail">
+        Allergens
+      </div>
+      <div>
+        {{temp_dish.allergens}}
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="p-col-6 right-section">
+    <img src={{temp_dish.image}} alt="" style="max-width: 100vh">
+    <div class="dish-detail-desc global-subtitle">
+      {{temp_dish.description}}
+    </div>
+  </div>
+</div>
