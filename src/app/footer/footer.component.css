@@ -27,16 +27,6 @@ ul.footer-icon-subsections li img{
   height:3em;
 }
 
-hr{
-  margin: 0;
-  padding: 0;
-  height: .3em;
-  background-color:lightgray;
-  color: lightgray;
-}
-
-
-
 @media(max-width: 1400px){
 
 

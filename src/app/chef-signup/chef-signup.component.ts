@@ -59,8 +59,7 @@ export class ChefSignupComponent implements OnInit {
   }
 
   onClickChefCreate() {
-    // let currId = this.afAuth.currentUserInfo.uid;
-    console.log(this.chefForm.value);
+    console.log('From chef-signup onClickChefCreate() ===> ',this.chefForm.value);
     this.chefService.createChef(this.chefForm.value);
     this.chefService.createChef("id:this.afAuth.currentUserInfo.uid");
   }

@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+.global-hr{
+  margin: 0;
+  padding: 0;
+  height: .3em;
+  background-color:lightgray;
+  color: lightgray;
+  z-index: -1;
+}
+
+.global-logo{
+height: 3rem;
+}
+
+.global-title {
+  font-family: 'Nunito',sans-serif;
+  font-size: 3.8em;
+  color: #773f31;
+  margin: 0.2em;
+  font-weight: bold;
+
+}
+
+.global-subtitle{
+  font-size: 2em;
+  color:#423e3d;
+}
+

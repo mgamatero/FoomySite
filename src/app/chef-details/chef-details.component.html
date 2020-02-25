@@ -1,10 +1,115 @@
-<p>CHEF DETAILS!!!!!</p>
-CHEF ID FROM PARAMS IS {{chef_id}}
-<div>
-CHEF DETAILS --
-  {{chefDetails | json}}
-</div>
+<!-- <div class="global-subtitle">
+  CHEF ID FROM PARAMS IS =====> {{chef_id}}
+  <div>
+    CHEF DETAILS =====>
+    {{chefDetails | json}}
+  </div>
 
-<div>
-  {{tempChefInfo|json}}
+  <div>
+    CHEF TEMPINFO =====>
+    {{tempChefInfo|json}}
+  </div>
+</div> -->
+CHEF ID FROM PARAMS IS =====> {{chef_id}}
+<div class="chef-details-page">
+  <div class="chef-details-header">
+    <div class="p-grid chef-details-content">
+      <div class="p-col-2"></div>
+      <div class="p-col-2">
+        <img src={{tempChefInfo.image}} class="chef-logo" alt="" style="width: 100%; max-width:200px fit-content">
+      </div>
+      <div class="chef-details p-col-6">
+        <div class="global-title">
+          {{tempChefInfo.name}}
+        </div>
+        <div class="global-subtitle">
+          <div class="chef-contact-details">
+          </div>
+          <div>
+            <div><i class="far fa-envelope"></i> {{tempChefInfo.contactEmail}}</div>
+            <div><i class="fas fa-phone"></i> {{tempChefInfo.contactPhone}}</div>
+          </div>
+          <div class="chef-details-buttons">
+            <button pButton type="button" class="ui-button-rounded ui-button-danger feedback-button"
+              label="Share"><i></i></button>
+            <button pButton type="button" class="ui-button-rounded ui-button-danger feedback-button"
+              label="Save"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-col-2"></div>
+  </div>
+
+  <hr>
+
+  <div class="chef-details-entree-section">
+    <div class="global-title">
+      Entree
+    </div>
+    <div class="p-grid chef-details-content">
+      <div class="p-col-6">
+        <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""
+          style="min-width: 75%; max-width:100px">
+      </div>
+      <div class="p-col-6">
+        <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""
+          style="min-width: 75%; max-width:100px">
+      </div>
+      <div class="p-col-6">
+        <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""
+          style="min-width: 75%; max-width:100px">
+      </div>
+      <div class="p-col-6">
+        <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""
+          style="min-width: 75%; max-width:100px">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="chef-details-sidedish-section">
+    <div class="global-title">
+      Side Dish
+    </div>
+    <div class="p-grid chef-details-content">
+      <div class="p-col-6">
+        <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""
+          style="min-width: 75%; max-width:100px">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="chef-details-description-section">
+    <div class="global-title">
+      {{tempChefInfo.name}}
+    </div>
+    <div class="global-subtitle chef-details-content">
+      {{tempChefInfo.misc}}
+    </div>
+
+    <hr>
+
+    <div class="chef-details-hours-section">
+      <div class="global-title">
+        Location & Hours
+      </div>
+      <div class="location-section chef-details-content">
+        <div class="global-subtitle">
+          {{tempChefInfo.city}}, {{tempChefInfo.state}}
+        </div>
+        <div>Exact location will be available after order is confirmed</div>
+        <img src="../../assets/images/temp-chef-details-map.gif" alt="map" style="width: 500px">
+      </div>
+      <div class="global-subtitle chef-details-content">
+        {{tempChefInfo.availableDays}}
+        <div>
+          {{tempChefInfo.availableTimes}}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

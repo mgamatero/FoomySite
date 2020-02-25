@@ -6,6 +6,7 @@
   justify-content: space-between;
  /* background-color:#f5e7e7; */
  background: linear-gradient(to left, #f5e7e7 0%, #bb4239 100%);
+ align-items: center;
 
 }
 
@@ -44,14 +45,6 @@ li{
   margin-top: 1em;
 }
 
-hr{
-  margin: 0;
-  padding: 0;
-  height: .3em;
-  background-color:lightgray;
-  color: lightgray;
-  z-index: -1;
-}
 
 
 

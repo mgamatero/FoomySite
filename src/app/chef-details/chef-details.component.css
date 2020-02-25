@@ -1,0 +1,34 @@
+.chef-logo{
+  border-radius: 50%;
+ }
+
+.chef-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chef-details-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin:1rem;
+}
+
+.chef-buttons{
+  align-items: center;
+}
+
+.dish-icon{
+  align-self: center;
+}
+
+.chef-details-page{
+  padding: 4rem;
+}
+
+.chef-details-content{
+  padding:4rem;
+}
