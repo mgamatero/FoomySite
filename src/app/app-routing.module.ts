@@ -12,6 +12,7 @@ import { ChefSignupComponent } from "./chef-signup/chef-signup.component";
 import { CreateDishComponent } from "./create-dish/create-dish.component";
 import { AddDishFormComponent } from "./add-dish-form/add-dish-form.component";
 import { ChefDetailsComponent } from "./chef-details/chef-details.component";
+import { DishDetailsComponent } from "./dish-details/dish-details.component";
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
@@ -27,6 +28,8 @@ const routes: Routes = [
   { path: "add-dish-form", component: AddDishFormComponent },
 
   { path: "chef-details/:id", component:ChefDetailsComponent },
+
+  { path: "dish-details/:id", component:DishDetailsComponent },
 
   { path: "**", component: NotFoundComponent }
 ];

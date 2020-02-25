@@ -1,8 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ChefService } from "../services/chef.service";
-import { ActivatedRoute, ParamMap } from "@angular/router";
-
-
+import { ActivatedRoute, ParamMap, Router } from "@angular/router";
 
 @Component({
   selector: "app-chef-details",
@@ -23,21 +21,22 @@ export class ChefDetailsComponent implements OnInit {
     availableTimes: ["Lunch, Noon"],
     contactEmail: "chang@chang.com",
     contactPhone: "776-998-7867",
-    misc: "Hello let's fry some stuff!"
+    misc: "Hello let's fry some stuff!",
+    category: "Entree, Side Dishes",
+    cuisine: "Chinese American Fusion"
   };
 
-  constructor(private chefService: ChefService,
-    private route: ActivatedRoute) {}
+  constructor(
+    private chefService: ChefService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-
-//This is the id from params
-this.route.paramMap.subscribe((params:ParamMap)=>{
-  this.chef_id = params.get('id');
-})
-
-
-
+    //This is the id from params
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.chef_id = params.get("id");
+    });
 
     // NOT WORKING =========== ????????????????????
     this.chefService
@@ -46,6 +45,11 @@ this.route.paramMap.subscribe((params:ParamMap)=>{
         console.log("Chef details => ", data);
         this.chefDetails = data;
       });
-      // ===============
+    // ===============
   }
+
+  onClickDishDetails(dishID){
+    this.router.navigate(['/dish-details',dishID])
+  }
+
 }

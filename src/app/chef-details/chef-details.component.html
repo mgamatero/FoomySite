@@ -26,6 +26,11 @@ CHEF ID FROM PARAMS IS =====> {{chef_id}}
           <div class="chef-contact-details">
           </div>
           <div>
+            <div><i class="fas fa-concierge-bell"></i> {{tempChefInfo.cuisine}}</div>
+            <div><i class="fas fa-utensils"></i> {{tempChefInfo.category}}</div>
+          </div>
+          <div></div>
+          <div>
             <div><i class="far fa-envelope"></i> {{tempChefInfo.contactEmail}}</div>
             <div><i class="fas fa-phone"></i> {{tempChefInfo.contactPhone}}</div>
           </div>
@@ -49,8 +54,10 @@ CHEF ID FROM PARAMS IS =====> {{chef_id}}
     </div>
     <div class="p-grid chef-details-content">
       <div class="p-col-6">
+        <a href="#" (click)="onClickDishDetails('TEMPDISHID')" routerLink="#" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
         <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""
           style="min-width: 75%; max-width:100px">
+</a>
       </div>
       <div class="p-col-6">
         <img src="../../assets/images/temp-create-dish-card.PNG" class="" alt=""

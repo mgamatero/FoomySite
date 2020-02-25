@@ -50,6 +50,7 @@ import { ToastModule } from "primeng/toast";
 import { ChefSignupComponent } from "./chef-signup/chef-signup.component";
 import { ChefService } from "./services/chef.service";
 import { ChefDetailsComponent } from "./chef-details/chef-details.component";
+import { DishDetailsComponent } from './dish-details/dish-details.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { ChefDetailsComponent } from "./chef-details/chef-details.component";
     SandboxComponent,
     AddDishFormComponent,
     ChefSignupComponent,
-    ChefDetailsComponent
+    ChefDetailsComponent,
+    DishDetailsComponent
   ],
   imports: [
     BrowserModule,
